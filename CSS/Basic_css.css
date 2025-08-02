@@ -1,0 +1,43 @@
+
+
+#main-heading {
+  color: blue;
+  text-align: center;
+}
+
+.info {
+  font-size: 18px;
+  color: green;
+}
+
+/* Practice Set 1 queastion 1 */
+
+.red {
+  background-color: red;
+  color: white;
+
+}
+
+/* Practice Set 1 queastion 2 */
+
+#head{
+  background-color: blue;
+}
+
+/* Practice Set 1 queastion 3 */
+
+.one{
+  background-color: black;
+  color: white;
+}
+
+/* Practice Set 1 queastion 4 */
+
+.two{
+  background-color: black;
+  color: rgb(255, 53, 225);
+}
+
+
+
+

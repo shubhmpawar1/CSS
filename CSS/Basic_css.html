@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Basic_css.css">
+    <title>CSS</title>
+
+    <!-- Practice Set 1 queastion 2 -->
+    <!-- <style>
+        #head{
+            background-color: brown;               
+        }
+    </style> -->
+</head>
+
+<body>
+    <header>
+        <h1>Css Basic</h1>
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <h2>Chapter 0</h2>
+                <h2>What is css [Cascading Style Sheets.]?</h2>
+
+                <p><strong>It is the language used to style and design HTML elements on a web page.</strong></p>
+
+                <hr>
+
+                <P><STRong>What CSS Can Do:</STRong></P>
+
+                <ul>
+                    <li><strong>Change text color, size, fonts</strong></li>
+                    <li><strong>Set backgrounds (color, image, gradient)</strong></li>
+                    <li>Control layout (spacing, alignment, positioning)</li>
+                    <li><strong>Make designs responsive (look good on all screen sizes)</strong></li>
+                    <li><strong>Add animations and transitions</strong></li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div>
+                <h2>Why Learn Css. ?</h2>
+
+                <ol>
+                    <li> <strong>Make Websites Look Good</strong>
+                        <ul>
+                            <li>HTML gives structure, but CSS gives style.</li><br>
+                            <dl>
+                                <dt>Without CSS:</dt>
+                                <dd>Websites look plain, like old-school black & white text.</dd><br>
+
+                                <dt>With CSS:</dt>
+                                <dd>You can create beautiful, colorful, well-designed layouts.</dd>
+                            </dl>
+
+
+                        </ul>
+                    </li> <br>
+
+                    <li><strong>Essential for Frontend Jobs</strong>
+                        <p>Every frontend developer must know CSS.</p>
+                        <p>Job interviews often ask about:</p>
+                        <ul>
+                            <li>Flexbox & Grid</li>
+                            <li>Responsive design</li>
+                            <li>Positioning & layouts</li>
+                            <li>Animations</li>
+                        </ul>
+                    </li><br>
+
+                    <li><strong>Create Responsive Designs</strong>
+                        <p>CSS lets your website work well on:</p>
+                        <ul>
+                            <li>Mobile phones </li>
+                            <li>Tablets </li>
+                            <li>Laptops </li>
+                            <li>Big monitors </li>
+                        </ul>
+
+
+                    </li><br>
+
+                    <li><strong>Control Every Visual Detail</strong>
+                        <p>With CSS, you control:</p>
+                        <ul>
+                            <li>Fonts</li>
+                            <li>Colors</li>
+                            <li>Spacing</li>
+                            <li>Buttons</li>
+                            <li>Hover effects</li>
+                            <li>Animations</li>
+                            <li>Shadows</li>
+                            <li>Layouts</li>
+
+                        </ul>
+                    </li><br>
+
+                    <li><strong>Works With All Web Technologies</strong>
+                        <p>CSS is used with:</p>
+                        <ul>
+                            <li>HTML</li>
+                            <li>JavaScript</li>
+                            <li>React, Vue, Angular</li>
+                            <li>WordPress</li>
+                            <li>Shopify, Webflow</li>
+                        </ul>
+                    </li><br>
+
+                    <li><strong>In-Demand Skill</strong>
+                        <p>Companies need developers who can:</p>
+                        <ul>
+                            <li>Build beautiful UIs</li>
+                            <li>Fix design bugs</li>
+                            <li>Make responsive layouts</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <hr>
+        </section>
+
+        <section>
+            <div>
+                <h2>Chapter 1</h2>
+                <h2>What Is Dom ?</h2>
+
+                <p>DOM stands for Document Object Model.</p>
+                <p>It is a tree-like structure created by the browser when it loads an HTML page.</p>
+            </div>
+
+            <hr>
+
+            <div>
+                <strong>Simple Explanation:</strong>
+                <p>When a web page loads:</p>
+                <ol>
+                    <li>The browser reads your HTML.</li><br>
+                    <li>It creates a DOM — a tree of objects representing the structure of your page.</li>
+                </ol>
+            </div>
+
+            <hr>
+
+            <div>
+                <strong>Example:</strong>
+
+                <p>html code:</p>
+
+                <pre>
+<code>
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello&lt;/h1&gt;
+    &lt;p&gt;Welcome to my site&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+
+                <p>This becomes a DOM Tree like:</p>
+
+                <pre>
+<code>
+Document
+ └── html
+     └── body
+         ├── h1 → "Hello"
+         └── p → "Welcome to my site"
+</code>
+</pre>
+
+
+
+
+
+            </div>
+            <hr>
+
+            <div>
+                <strong>What is DOM in CSS?</strong>
+                <p>When you write CSS, you're targeting elements in the DOM.</p>
+
+                <p>The browser uses the DOM Tree to figure out:</p>
+
+                <ul>
+                    <li>Which elements to style</li>
+                    <li>What styles to apply</li>
+                    <li>In what order (cascading)</li>
+                </ul>
+
+                <p>So CSS applies styles based on the structure of the DOM.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <div>
+                <h2>What are id and class in HTML?</h2>
+
+                <p>They are attributes used to label elements so you can style or control them with CSS or JavaScript.
+                </p>
+
+                <p><strong>1. id (Unique Identifier)</strong></p>
+
+                <ul>
+                    <li>Used to give a unique name to one specific element</li><br>
+                    <li>Only one element should have that id on a page</li>
+                </ul>
+
+                <hr>
+
+                <strong>Example:</strong>
+
+                <h1 id="main-heading">Example Of id #</h1>
+
+                <hr>
+
+                <P> <strong>Html Code: </strong></P>
+
+
+
+                <pre>
+<code>
+&lt;h1 id="main-heading"&gt;Welcome&lt;/h1&gt;
+</code>
+</pre>
+
+                <p><strong>Css Code:</strong></p>
+
+                <pre>
+<code>
+#main-heading {
+  color: blue;
+  text-align: center;
+}
+</code>
+</pre>
+
+                <hr>
+
+
+
+
+
+
+            </div>
+
+            <div>
+                <h2>class (Reusable Group)</h2>
+
+                <ul>
+                    <li>Used to group one or more elements</li><br>
+                    <li>Can be used multiple times</li><br>
+                    <li>Helpful when you want to style multiple elements in the same way</li>
+                </ul>
+
+                <hr>
+
+                <p><strong>Example:</strong></p>
+
+                <p class="info">This is paragraph 1 Example Of Class .</p>
+                <p class="info">This is paragraph 2 Example Of Class .</p>
+
+                <hr>
+
+
+                <strong>Html Code:</strong>
+
+                <pre>
+<code>
+&lt;p class="info"&gt;This is paragraph 1&lt;/p&gt;
+&lt;p class="info"&gt;This is paragraph 2&lt;/p&gt;
+</code>
+</pre>
+
+                <strong>Css Code:</strong>
+
+                <pre>
+<code>
+.info {
+  font-size: 18px;
+  color: green;
+}
+</code>
+</pre>
+
+
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <div>
+                <h2>What is a CSS Selector ?</h2>
+
+                <p>A CSS selector is a pattern used to select HTML elements you want to style.</p>
+            </div>
+
+            <hr>
+            <div>
+                <strong>Basic Types of CSS Selectors:</strong> <br><br>
+
+                <table border="1" cellpadding="5">
+                    <thead>
+                        <tr>
+                            <th>Selector</th>
+                            <th>Targets</th>
+                            <th>Example</th>
+                            <th>CSS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Element</td>
+                            <td>All tags of that type</td>
+                            <td>&lt;p&gt;</td>
+                            <td>p { color: red; }</td>
+                        </tr>
+                        <tr>
+                            <td>Class</td>
+                            <td>Elements with a class</td>
+                            <td>&lt;div class="box"&gt;</td>
+                            <td>.box { background: yellow; }</td>
+                        </tr>
+                        <tr>
+                            <td>ID</td>
+                            <td>A unique element with an ID</td>
+                            <td>&lt;h1 id="main"&gt;</td>
+                            <td>#main { font-size: 24px; }</td>
+                        </tr>
+                        <tr>
+                            <td>Universal</td>
+                            <td>All elements</td>
+                            <td>*</td>
+                            <td>* { margin: 0; }</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </code>
+                </pre>
+
+            </div>
+
+            <hr>
+
+            <div>
+                <h2>CSS Rules Explained</h2>
+
+                <p><strong>A CSS rule defines how HTML elements should look. It consists of a selector and a declaration
+                        block.
+
+                    </strong></p>
+
+                <hr>
+
+                <strong> Basic Structure:</strong>
+
+
+
+                <pre>
+<code>
+selector {
+  property: value;
+  property: value;
+}
+</code>
+</pre>
+
+                <strong>Example:</strong>
+
+                <pre>
+<code>
+p {
+  color: blue;
+  font-size: 16px;
+}
+</code>
+</pre>
+
+                <ul>
+                    <li>Selector: p (targets all &lt;p&gt; tags)</li> <br>
+                    <li>Declarations: <br>
+                        <ul>
+                            <li>color: blue; (makes text blue)</li><br>
+                            <li>font-size: 16px; (sets text size)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <hr>
+
+                <table border="1" cellpadding="6" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Part</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Selector</strong></td>
+                            <td>Targets the HTML elements to style (<code>p</code>, <code>.class</code>,
+                                <code>#id</code>, etc.)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Property</strong></td>
+                            <td>What you want to change (like <code>color</code>, <code>background</code>,
+                                <code>font-size</code>)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Value</strong></td>
+                            <td>The setting for the property (<code>red</code>, <code>24px</code>, <code>center</code>,
+                                etc.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Declaration</strong></td>
+                            <td>A pair of property and value, like <code>color: red;</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Declaration block</strong></td>
+                            <td>All declarations within <code>{ }</code>, separated by <code>;</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+
+
+            </div>
+
+
+
+
+
+        </section>
+
+        <br>
+
+        <hr>
+
+        <section>
+
+            <div>
+                <h2>Practice SET 1</h2>
+
+                <p><strong>Q1. Create website with a class red div with has a background color of red and color
+                        white</strong></p>
+            </div>
+
+
+            <div class="red">
+                <p><strong>i am practice set 1 question 1.</strong></p>
+            </div>
+
+            <div>
+                <p><strong>Q2. create an element with id head and verify that background color works on it as inline ,
+                        external as well as using style tag css</strong></p>
+            </div>
+
+            <p id="head" style="background-color: blueviolet;" *>i am practice set 1 question 2.</p>
+
+            <div>
+                <p><strong>Q3. Create a css class one and verify that it works on multiple element</strong></p>
+            </div>
+
+            <div class="one">
+                <p><strong>i am practice set 1 question 3</strong></p>
+
+                <h1>question 3</h1>
+
+            </div>
+
+            <div class="one">
+                <p><strong>i am practice set 1 question 3</strong></p>
+            </div>
+
+            <div>
+                <p><strong>Q4. create multiple css class and vberify that all of these works on the same
+                        element.</strong></p>
+            </div>
+
+            <div class="one two">
+                <p><strong>i am practice set 1 question 4</strong></p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <div>
+                <h2>Chapter 2</h2>
+                <h3>Color and background Property</h3>
+            </div>
+
+            <div>
+                <p><strong>1. Color Property:</strong></p>
+                <p>What it does: Sets the color of the text.</p>
+
+                <strong>Syntax:</strong>
+
+                <pre>
+<code>
+selector {
+  color: red; /* or #ff0000 or rgb(255, 0, 0) */
+}
+</code>
+</pre>
+
+                <strong>Examples:</strong>
+
+                <pre>
+<code>
+h1 {
+  color: blue;
+}
+
+p {
+  color: #333;
+}
+
+.highlight {
+  color: rgb(255, 100, 0);
+}
+</code>
+</pre>
+
+                <div>
+                    <p><strong>CSS color values can be defined in several formats depending on how you want to represent
+                            the color. Here's a clear table showing the different types:</strong></p>
+
+                            <hr>
+
+                    <table border="1" cellpadding="6" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th><strong>Color Value Type</strong></th>
+                                <th><strong>Example</strong></th>
+                                <th><strong>Description</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Named Colors</strong></td>
+                                <td><code>red</code>, <code>blue</code>, <code>green</code></td>
+                                <td>Predefined color names. Easy to use, but limited in number.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hexadecimal</strong></td>
+                                <td><code>#FF0000</code>, <code>#00FF00</code></td>
+                                <td>6-digit hex code (<code>#RRGGBB</code>) or short 3-digit (<code>#F00</code>) format
+                                    for colors.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RGB</strong></td>
+                                <td><code>rgb(255, 0, 0)</code></td>
+                                <td>Defines Red, Green, Blue components with values from 0 to 255.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RGBA</strong></td>
+                                <td><code>rgba(255, 0, 0, 0.5)</code></td>
+                                <td>Same as RGB, with an <strong>alpha</strong> value (opacity) between 0 and 1.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>HSL</strong></td>
+                                <td><code>hsl(0, 100%, 50%)</code></td>
+                                <td>Hue (angle 0–360), Saturation (%), Lightness (%). Easy to adjust color tone.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>HSLA</strong></td>
+                                <td><code>hsla(0, 100%, 50%, 0.5)</code></td>
+                                <td>Same as HSL with <strong>alpha</strong> (opacity).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Transparent</strong></td>
+                                <td><code>transparent</code></td>
+                                <td>Special keyword for full transparency.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>CurrentColor</strong></td>
+                                <td><code>currentColor</code></td>
+                                <td>Inherits the current text color (used for borders, shadows, etc.).</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+
+                    <hr>
+
+                    <br>
+
+                    <strong>Example in CSS:</strong>
+
+                    <pre>
+<code>
+h1 {
+  color: #3498db;         /* Hex */
+}
+p {
+  color: rgba(255, 0, 0, 0.7); /* Semi-transparent red */
+}
+div {
+  background-color: hsl(120, 100%, 50%); /* Bright green */
+}
+</code>
+</pre>
+
+
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>
