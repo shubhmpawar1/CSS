@@ -539,7 +539,7 @@ p {
                     <p><strong>CSS color values can be defined in several formats depending on how you want to represent
                             the color. Here's a clear table showing the different types:</strong></p>
 
-                            <hr>
+                    <hr>
 
                     <table border="1" cellpadding="6" cellspacing="0">
                         <thead>
@@ -592,7 +592,7 @@ p {
                                 <td>Inherits the current text color (used for borders, shadows, etc.).</td>
                             </tr>
                         </tbody>
-                    </table> 
+                    </table>
 
                     <hr>
 
@@ -625,7 +625,98 @@ div {
 
             </div>
 
+            <hr>
+
+            <div>
+                <h3>2. Background Property</h3>
+
+                <p><strong>In CSS, the background property is a shorthand used to set multiple background-related values
+                        in a single line.</strong></p>
+
+                <strong>Syntax:</strong>
+
+                <pre>
+<code>
+background: [color] [image] [position] / [size] [repeat] [attachment] [origin] [clip];
+</code>
+</pre>
+
+<hr>
+
+                <strong>Example:</strong>
+
+                <pre>
+<code>
+div {
+  background: #f0f0f0; /* Just background color */
+}
+
+body {
+  background: url("image.jpg") no-repeat center center / cover;
+}
+</code>
+</pre>
+
+<hr>
+
+                <br>
+
+                <table border="1" cellpadding="6" cellspacing="0">
+                    <caption>Other Related Background Properties:</caption>
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>What it Does</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>background-color</code></td>
+                            <td>Sets background color only</td>
+                            <td><code>background-color: yellow;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>background-image</code></td>
+                            <td>Sets background image</td>
+                            <td><code>background-image: url("bg.jpg");</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>background-repeat</code></td>
+                            <td>Repeat image or not</td>
+                            <td><code>background-repeat: no-repeat;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>background-position</code></td>
+                            <td>Position of image</td>
+                            <td><code>background-position: center top;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>background-size</code></td>
+                            <td>Size of background image</td>
+                            <td><code>background-size: cover;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>background-attachment</code></td>
+                            <td>Fixed or scroll with page</td>
+                            <td><code>background-attachment: fixed;</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+
+
+
+
+
+            </div>
+
         </section>
+
+        <hr>
+
 
 
     </main>
