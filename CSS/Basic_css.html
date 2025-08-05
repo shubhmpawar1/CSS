@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Basic_css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
     <title>CSS</title>
 
     <!-- Practice Set 1 queastion 2 -->
@@ -1622,7 +1625,7 @@ selector {
                 <div>
                     <p class="bold">Newer Shorthand: text-decoration</p>
 
-                   
+
 
                     <pre><code>
 selector {
@@ -1686,11 +1689,414 @@ selector {
                 </div>
             </div>
 
+            <div class="tt">
+
+                <div>
+
+                    <h3 class="center">IV .Text-transform</h3>
+
+                    <p class="bold">In CSS, the text-transform property is used to control the capitalization of text.
+                        It allows you to transform text to uppercase, lowercase, or capitalize the first letter of each
+                        word.</p>
+                </div>
+
+
+
+                <div>
+                    <p class="bold">Examples:</p>
+
+                    <pre>
+<code>
+&lt;p style="text-transform: none;"&gt;this is normal text&lt;/p&gt;
+&lt;p style="text-transform: capitalize;"&gt;this is capitalized text&lt;/p&gt;
+&lt;p style="text-transform: uppercase;"&gt;this is uppercase text&lt;/p&gt;
+&lt;p style="text-transform: lowercase;"&gt;THIS IS LOWERCASE TEXT&lt;/p&gt;
+</code>
+</pre>
+
+                    <hr>
+
+                    <p style="text-transform: none;">this is normal text</p>
+                    <p style="text-transform: capitalize;">this is capitalized text</p>
+                    <p style="text-transform: uppercase;">this is uppercase text</p>
+                    <p style="text-transform: lowercase;">THIS IS LOWERCASE TEXT</p>
+
+                </div>
+
+                <div>
+                    <p class="bold">Syntax:</p>
+
+                    <pre><code>
+selector {
+  text-transform: value;
+}
+</code></pre>
+
+                </div>
+
+                <div>
+
+                    <table border="1">
+                        <caption>Values:</caption>
+                        <thead>
+                            <tr>
+                                <th>Value</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>none</code></td>
+                                <td>Default. No capitalization (text stays same)</td>
+                            </tr>
+                            <tr>
+                                <td><code>capitalize</code></td>
+                                <td>Capitalizes the first letter of each word</td>
+                            </tr>
+                            <tr>
+                                <td><code>uppercase</code></td>
+                                <td>Transforms all characters to uppercase</td>
+                            </tr>
+                            <tr>
+                                <td><code>lowercase</code></td>
+                                <td>Transforms all characters to lowercase</td>
+                            </tr>
+                            <tr>
+                                <td><code>full-width</code></td>
+                                <td>Converts to full-width characters (rare)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div>
+
+                    <p class="bold">Example:</p>
+
+                    <pre>
+        <code>
+        &lt;p style="text-transform: none;"&gt;this is normal text&lt;/p&gt;
+        &lt;p style="text-transform: capitalize;"&gt;this is capitalized text&lt;/p&gt;
+        &lt;p style="text-transform: uppercase;"&gt;this is uppercase text&lt;/p&gt;
+        &lt;p style="text-transform: lowercase;"&gt;THIS IS LOWERCASE TEXT&lt;/p&gt;
+        </code>
+        </pre>
+
+                    <hr>
+
+
+                    <p style="text-transform: none;">this is normal text</p>
+                    <p style="text-transform: capitalize;">this is capitalized text</p>
+                    <p style="text-transform: uppercase;">this is uppercase text</p>
+                    <p style="text-transform: lowercase;">THIS IS LOWERCASE TEXT</p>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
             </div>
+
+            <div class="lh">
+                <div>
+
+                    <h3 class="center">V. line height</h3>
+
+                    <p class="bold">line-height in CSS controls the vertical spacing between lines of text. It’s an
+                        important property for improving readability.</p>
+                </div>
+
+                <div>
+                    <p class="bold">Syntax:</p>
+
+                    <p class="bold">line-height: normal | number | length | percentage;
+                    </p>
+                </div>
+
+                <div>
+                    <table border="1" cellpadding="8" cellspacing="0">
+                        <caption>Values:</caption>
+                        <thead>
+                            <tr>
+                                <th>Value Type</th>
+                                <th>Example</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>normal</code></td>
+                                <td><code>line-height: normal;</code></td>
+                                <td>Browser default (usually 1.2 to 1.4 times font size).</td>
+                            </tr>
+                            <tr>
+                                <td>Number</td>
+                                <td><code>line-height: 1.5;</code></td>
+                                <td>Multiplies the element's font size (unitless).</td>
+                            </tr>
+                            <tr>
+                                <td>Length</td>
+                                <td><code>line-height: 24px;</code></td>
+                                <td>Sets exact height between baselines in px, em, rem, etc.</td>
+                            </tr>
+                            <tr>
+                                <td>Percentage</td>
+                                <td><code>line-height: 150%;</code>
+                                <td>Relative to the element’s font size.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div>
+                    <h3>Example:</h3>
+
+                    <hr>
+
+                    <pre><code>&lt;p style="font-size: 16px; line-height: 1.5;"&gt;
+  This paragraph has 8.5 line height.
+&lt;/p&gt;
+
+&lt;p style="font-size: 16px; line-height: 24px;"&gt;
+  This paragraph has a fixed line height of 24px.
+&lt;/p&gt;
+</code></pre>
+
+                    <hr>
+
+                    <p style="font-size: 16px; line-height: 8.5;">
+                        This paragraph has 8.5 line height.
+                    </p>
+
+                    <p style="font-size: 16px; line-height: 24px;">
+                        This paragraph has a fixed line height of 24px.
+                    </p>
+                </div>
+            </div>
+
+            <div class="ff">
+                <div>
+
+                    <h3 class="center">Font-family</h3>
+                    <p class="bold">
+                        The font-family property defines the typeface (font) used for text in an element.
+                    </p>
+                </div>
+
+                <div>
+                    <p class="bold">Syntax:</p>
+
+                    <pre><code>font-family: "Font Name", fallback1, fallback2, ...;
+</code></pre>
+
+                    <p class="bold">You can list multiple fonts — the browser will use the first available one.</p>
+                </div>
+
+                <div>
+                    <p class="bold">Example:</p>
+
+                    <p class="bold">Html Font-familiy</p>
+
+                    <pre><code>&lt;p style="font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;"&gt;
+  Your text goes here.
+&lt;/p&gt;
+</code></pre>
+
+                    <p class="bold">If Roboto is not available, it tries the next one (Helvetica Neue, then Arial,
+                        then default sans-serif).</p>
+
+                    <hr>
+
+                    <p class="bold">Google Font</p>
+
+                    <pre><code>&lt;link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet"&gt;
+&lt;style&gt;
+  body {
+    font-family: "Roboto", sans-serif;
+  }
+&lt;/style&gt;
+</code></pre>
+
+                    <p class="playwrite-hu">google font import</p>
+
+
+                    <hr>
+
+                    <p class="bold">TIPS:</p>
+
+                    <ul>
+                        <li>Always include a generic family (like <code>sans-serif</code>) at the end.</li>
+                        <li>For custom fonts (like from Google Fonts), you must import them.</li>
+                    </ul>
+
+
+                </div>
+
+                <div>
+                    <table border="1" cellpadding="8" cellspacing="0" class="tff">
+                        <caption>Font Categories (Generic Families):</caption>
+                        <thead>
+
+                            <tr>
+                                <th>Generic Family</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>serif</code></td>
+                                <td>Fonts with strokes on letters (e.g., Times New Roman)</td>
+                            </tr>
+                            <tr>
+                                <td><code>sans-serif</code></td>
+                                <td>Clean fonts without strokes (e.g., Arial, Roboto)</td>
+                            </tr>
+                            <tr>
+                                <td><code>monospace</code></td>
+                                <td>Every letter has the same width (e.g., Courier New)</td>
+                            </tr>
+                            <tr>
+                                <td><code>cursive</code></td>
+                                <td>Handwriting-style fonts</td>
+                            </tr>
+                            <tr>
+                                <td><code>fantasy</code></td>
+                                <td>Decorative or comic-style fonts</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+            <div class="fs">
+                <div>
+
+                    <h3>Font Size</h3>
+
+                    <p class="bold">In CSS, the font-size property sets the size of the text.</p>
+                </div>
+
+                <div>
+                    <p class="bold">Basic Syntax</p>
+
+                    <pre><code>selector {
+  font-size: value;
+}
+</code></pre>
+
+                </div>
+
+                <div>
+                    <table border="1" cellpadding="6" cellspacing="0">
+                        <caption>Common Units You Can Use
+Unit	Example	Description
+px	font-size: 16px;	Fixed size in pixels
+em	font-size: 1.2em;	Relative to the parent element
+rem	font-size: 1rem;	Relative to the root element (html)
+%	font-size: 120%;	Relative to the parent element
+vw/vh	font-size: 2vw;	Relative to viewport width/height
+larger, smaller	font-size: larger;	Relative to parent size
+
+🔹 Example Usage
+html
+Copy
+Edit
+<p style="font-size: 18px;">This is 18px text.</p>
+<p style="font-size: 1.5em;">This is 1.5em text.</p>
+<p style="font-size: 120%;">This is 120% text.</p>
+🔹 Best Practice
+Use rem for scalability and consistency across your site. For example:
+
+css
+Copy
+Edit
+html {
+  font-size: 16px; /* 1rem = 16px */
+}
+
+body {
+  font-size: 1rem; /* 16px */
+}
+
+h1 {
+  font-size: 2rem; /* 32px */
+}
+Let me know if you want a visual comparison or an interactive demo.
+
+
+
+
+
+
+
+
+
+Ask ChatGPT
+</caption>
+                        <thead>
+                            <tr>
+                                <th>Unit</th>
+                                <th>Example</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>px</code></td>
+                                <td><code>font-size: 16px;</code></td>
+                                <td>Fixed size in pixels</td>
+                            </tr>
+                            <tr>
+                                <td><code>em</code></td>
+                                <td><code>font-size: 1.2em;</code></td>
+                                <td>Relative to the parent element</td>
+                            </tr>
+                            <tr>
+                                <td><code>rem</code></td>
+                                <td><code>font-size: 1rem;</code></td>
+                                <td>Relative to the root element (<code>html</code>)</td>
+                            </tr>
+                            <tr>
+                                <td><code>%</code></td>
+                                <td><code>font-size: 120%;</code></td>
+                                <td>Relative to the parent element</td>
+                            </tr>
+                            <tr>
+                                <td><code>vw</code>/<code>vh</code></td>
+                                <td><code>font-size: 2vw;</code></td>
+                                <td>Relative to viewport width/height</td>
+                            </tr>
+                            <tr>
+                                <td><code>larger</code>, <code>smaller</code></td>
+                                <td><code>font-size: larger;</code></td>
+                                <td>Relative to parent size</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+
+
+
+            </div>
+
         </section>
 
 
