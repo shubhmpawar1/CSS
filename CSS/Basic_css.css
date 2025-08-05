@@ -39,5 +39,10 @@
 }
 
 
+body{
+  background-image: url("../img/lap.gif");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
 
 
