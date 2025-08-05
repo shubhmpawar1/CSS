@@ -1986,7 +1986,7 @@ selector {
             <div class="fs">
                 <div>
 
-                    <h3>Font Size</h3>
+                    <h3 class="center">Font Size</h3>
 
                     <p class="bold">In CSS, the font-size property sets the size of the text.</p>
                 </div>
@@ -2002,52 +2002,8 @@ selector {
                 </div>
 
                 <div>
-                    <table border="1" cellpadding="6" cellspacing="0">
-                        <caption>Common Units You Can Use
-Unit	Example	Description
-px	font-size: 16px;	Fixed size in pixels
-em	font-size: 1.2em;	Relative to the parent element
-rem	font-size: 1rem;	Relative to the root element (html)
-%	font-size: 120%;	Relative to the parent element
-vw/vh	font-size: 2vw;	Relative to viewport width/height
-larger, smaller	font-size: larger;	Relative to parent size
-
-🔹 Example Usage
-html
-Copy
-Edit
-<p style="font-size: 18px;">This is 18px text.</p>
-<p style="font-size: 1.5em;">This is 1.5em text.</p>
-<p style="font-size: 120%;">This is 120% text.</p>
-🔹 Best Practice
-Use rem for scalability and consistency across your site. For example:
-
-css
-Copy
-Edit
-html {
-  font-size: 16px; /* 1rem = 16px */
-}
-
-body {
-  font-size: 1rem; /* 16px */
-}
-
-h1 {
-  font-size: 2rem; /* 32px */
-}
-Let me know if you want a visual comparison or an interactive demo.
-
-
-
-
-
-
-
-
-
-Ask ChatGPT
-</caption>
+                    <table border="1" class="tff" cellpadding="6" cellspacing="0">
+                        <caption>Common Units You Can Use</caption>
                         <thead>
                             <tr>
                                 <th>Unit</th>
@@ -2088,6 +2044,36 @@ Ask ChatGPT
                             </tr>
                         </tbody>
                     </table>
+
+                </div>
+
+                <div>
+                    <p class="bold">Example:</p>
+
+                    <pre><code>&lt;p style="font-size: 18px;"&gt;This is 18px text.&lt;/p&gt;
+&lt;p style="font-size: 1.5em;"&gt;This is 1.5em text.&lt;/p&gt;
+&lt;p style="font-size: 120%;"&gt;This is 120% text.&lt;/p&gt;
+</code></pre>
+
+                    <hr>
+
+                    <p style="font-size: 18px;">This is 18px text.</p>
+                    <p style="font-size: 1.5em;">This is 1.5em text.</p>
+                    <p style="font-size: 120%;">This is 120% text.</p>
+
+
+
+
+                </div>
+
+                <div>
+                    <p class="bold">Best Practice</p>
+
+                    <p class="bold">Use rem for scalability and consistency across your site. For example:</p>
+
+                    <pre><code>font-size: 16px; /* 1rem = 16px */</code></pre>
+
+                    <pre><code>font-size: 32px; /* 2rem = 32px */</code></pre>
 
                 </div>
             </div>
