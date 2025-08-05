@@ -17,7 +17,7 @@
 
 <body>
     <header>
-        <h1>Css Basic</h1>
+        <h1 style="text-align: center;">Css Basic</h1>
     </header>
 
     <main>
@@ -704,6 +704,8 @@ body {
                     </tbody>
                 </table>
 
+                <hr>
+
                 <div>
                     <h3>background-image:</h3>
 
@@ -722,7 +724,236 @@ background-image: url("image.jpg");
 
                 </div>
 
+                <hr>
 
+                <div>
+                    <h3>background-repeat:</h3>
+
+                    <p><strong>The background-repeat property in CSS controls whether and how a background image repeats
+                            (tiles) within an element.</strong></p>
+
+                    <strong>Css Syntax:</strong>
+
+                    <pre>
+<code>
+/* 1. Repeats both horizontally and vertically */
+body {
+  background-image: url("bg.jpg");
+  background-repeat: repeat;
+}
+
+/* 2. Repeats horizontally only */
+body {
+  background-image: url("bg.jpg");
+  background-repeat: repeat-x;
+}
+
+/* 3. Repeats vertically only */
+body {
+  background-image: url("bg.jpg");
+  background-repeat: repeat-y;
+}
+
+/* 4. No repeat at all */
+body {
+  background-image: url("bg.jpg");
+  background-repeat: no-repeat;
+}
+
+/* 5. Repeats with space between images */
+body {
+  background-image: url("bg.jpg");
+  background-repeat: space;
+}
+
+/* 6. Scales image to fit container without clipping */
+body {
+  background-image: url("bg.jpg");
+  background-repeat: round;
+}
+</code>
+</pre>
+
+                </div>
+
+                <div>
+                    <h3>background-size</h3>
+                    <p><strong>The background-size property in CSS defines the size of the background image.</strong>
+                    </p>
+
+                    <hr>
+
+                    <strong>Syntax:</strong>
+
+                    <pre>
+<code>
+/* background-size: auto; → Keeps the image's original size */
+background-size: auto;
+
+/* background-size: cover; → Stretches image to cover the element (may crop) */
+background-size: cover;
+
+/* background-size: contain; → Scales image to fit the element (no cropping) */
+background-size: contain;
+
+/* background-size: 200px 150px; → Custom width and height for image */
+background-size: 200px 150px;
+
+/* background-size: 100% auto; → Full width, height adjusts automatically */
+background-size: 100% auto;
+</code>
+</pre>
+
+                </div>
+
+                <hr>
+
+                <div>
+                    <h3>background-position</h3>
+
+                    <p><strong>The background-position property in CSS sets the starting position of a background image
+                            within an element.</strong></p>
+
+                    <hr>
+
+                    <strong>Syntax:</strong>
+
+                    <pre>
+<code>
+background-position: x y;
+</code>
+</pre>
+
+                    <ul>
+                        <li>x → horizontal position (left, center, right, or specific length/percentage)</li>
+
+                        <li>y → vertical position (top, center, bottom, or specific length/percentage)</li>
+                    </ul>
+
+                    <pre>
+<code>
+background-position: left top;        /* Top-left corner (default) */
+background-position: center center;   /* Center of the element */
+background-position: right bottom;    /* Bottom-right corner */
+background-position: 50% 50%;         /* Same as center center */
+background-position: 10px 20px;       /* 10px from the left, 20px from the top */
+background-position: left 20px;       /* Left edge, 20px from the top */
+background-position: 20% 80%;         /* 20% across and 80% down from the top-left corner */
+</code>
+</pre>
+
+
+
+
+                </div>
+
+                <hr>
+
+                <div>
+                    <h3>background-attachment</h3>
+
+                    <p><strong>The background-attachment property in CSS controls whether a background image scrolls
+                            with the page or stays fixed in place.</strong></p>
+
+                    <hr>
+
+                    <strong>Syntax:</strong>
+
+                    <pre>
+<code>
+background-attachment: scroll | fixed | local;
+</code>
+</pre>
+
+                    <hr>
+
+                    <strong><a href="Background-attachment.html">Click Me And See Example:</a></strong>
+
+
+
+                </div>
+
+                <hr>
+
+                <div>
+                    <table border="1" cellpadding="6" cellspacing="0">
+                        <caption> Values:</caption>
+                        <thead>
+                            <tr>
+                                <th>Value</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>scroll</code></td>
+                                <td>Default. Background scrolls with the content.</td>
+                            </tr>
+                            <tr>
+                                <td><code>fixed</code></td>
+                                <td>Background stays fixed when the page scrolls.</td>
+                            </tr>
+                            <tr>
+                                <td><code>local</code></td>
+                                <td>Background scrolls with the element’s content (used with scrollable containers).
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>Background Shorthand Property</h3>
+
+                <p><strong>The background shorthand property in CSS lets you set multiple background properties in a
+                        single line.</strong></p>
+
+                <hr>
+
+                <strong>Syntax:</strong>
+
+                <pre>
+<code>
+background: color image position/size repeat attachment origin clip;
+</code>
+</pre>
+
+                <hr>
+
+                <strong>Example:</strong>
+
+                <pre>
+<code>
+background: #f0f0f0 url("bg.jpg") no-repeat center/cover fixed;
+</code>
+</pre>
+
+                <hr>
+
+                <strong>html order list Order of Values (not strict, but usually):</strong>
+
+                <ol>
+                    <li><strong>background-color</strong></li>
+                    <li><strong>background-image</strong></li>
+                    <li><strong>background-repeat</strong></li>
+                    <li><strong>background-position</strong></li>
+                    <li><strong>background-size</strong> (after <code>/</code>)</li>
+                    <li><strong>background-attachment</strong></li>
+                    <li><strong>background-origin</strong> (optional)</li>
+                    <li><strong>background-clip</strong> (optional)</li>
+                </ol>
 
 
 
@@ -734,6 +965,733 @@ background-image: url("image.jpg");
         </section>
 
         <hr>
+
+
+        <section>
+
+
+            <h2>Chapter 3 [Css Box Model]</h2>
+
+            <div>
+                <h3>I. Css Box Model</h3>
+
+                <p><strong>The CSS Box Model describes how every HTML element is structured and how spacing and size are
+                        calculated.</strong></p>
+
+                <p><strong>Each element is like a box made up of four layers:</strong></p>
+
+                <hr>
+
+                <strong>Diagram:</strong>
+
+                <img src="..\img\box.png" alt="image not found">
+
+                <hr>
+
+                <strong> Box Model Layers:</strong>
+
+                <ol>
+                    <li><strong>Content</strong>
+                        <ul>
+                            <li>The actual text, image, or element.</li>
+                            <li>Set width &amp; height here: <code>width</code>, <code>height</code>.</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>Padding</strong>
+                        <ul>
+                            <li>Space inside the element, around the content.</li>
+                            <li>Increases box size.</li>
+                            <li><code>padding: 10px;</code></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>Border</strong>
+                        <ul>
+                            <li>The border surrounding the padding.</li>
+                            <li>You can style it with color, width, style.</li>
+                            <li><code>border: 2px solid black;</code></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>Margin</strong>
+                        <ul>
+                            <li>Space outside the element.</li>
+                            <li>Creates space between elements.</li>
+                            <li><code>margin: 20px;</code></li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <hr>
+
+                <strong> Example:</strong>
+
+                <pre><code>
+.box {
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 5px solid green;
+  margin: 15px;
+}
+</code></pre>
+
+                <ul>
+                    <li><strong>Total Width</strong> = 200 + (20 × 2) + (5 × 2) = <strong>250px</strong></li>
+                    <li><strong>Total Height</strong> = 100 + (20 × 2) + (5 × 2) = <strong>150px</strong></li>
+                </ul>
+
+                <p><strong>Margins are outside, so they're not included in the total box size.</strong></p>
+
+                <hr>
+
+                <strong>Shorthand Notion:</strong>
+
+                <pre><code>
+/* 1 value → all sides */
+margin: 10px;        /* top, right, bottom, left */
+padding: 10px;
+
+/* 2 values → top & bottom | left & right */
+margin: 10px 20px;   /* 10px top & bottom, 20px left & right */
+padding: 5px 15px;
+
+/* 3 values → top | left & right | bottom */
+margin: 10px 15px 20px;
+padding: 5px 10px 15px;
+
+/* 4 values → top | right | bottom | left */
+margin: 10px 20px 30px 40px;
+padding: 5px 10px 15px 20px;
+</code></pre>
+
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>II. Setting Border:</h3>
+
+                <p><strong>In CSS, the border property is used to set the border around an HTML element. It can be set
+                        in shorthand or individual properties.</strong></p>
+
+                <hr>
+
+                <strong>Shorthand Syntax:</strong>
+
+                <pre><code>
+selector {
+  border: 2px solid black;
+}
+</code></pre>
+
+                <strong>Format:</strong>
+
+                <p><strong>border: [width] [style] [color];</strong></p>
+
+                <hr>
+
+                <table border="1" cellpadding="8">
+                    <caption>Common Border Styles:</caption>
+                    <thead>
+                        <tr>
+                            <th>Style</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>solid</td>
+                            <td>▬▬▬▬</td>
+                        </tr>
+                        <tr>
+                            <td>dashed</td>
+                            <td>- - - - -</td>
+                        </tr>
+                        <tr>
+                            <td>dotted</td>
+                            <td>·······</td>
+                        </tr>
+                        <tr>
+                            <td>double</td>
+                            <td>║║</td>
+                        </tr>
+                        <tr>
+                            <td>groove</td>
+                            <td>3D look (varies by browser)</td>
+                        </tr>
+                        <tr>
+                            <td>none</td>
+                            <td>No border</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr>
+
+                <strong>Example:</strong>
+
+                <pre><code>
+.border {
+  border-top: 2px solid green;
+  border-right: 4px dotted blue;
+  border-bottom: 3px double red;
+  border-left: none;
+
+  height: 300px;
+  width: 300px;
+}
+</code></pre>
+
+
+                <div class="border">
+
+                </div>
+
+
+
+
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>border-radius</h3>
+
+                <p><strong>The border-radius property is used to round the corners of an element.</strong></p>
+            </div>
+
+            <hr>
+
+            <strong>Basic Syntax:</strong>
+
+            <pre><code>
+selector {
+  border-radius: 10px;
+}
+</code></pre>
+
+            <p>This rounds all four corners by 10px.</p>
+
+            <hr>
+
+            <strong>Shorthand for Corners (in order):</strong>
+
+            <pre><code>
+selector {
+  border-radius: 10px 20px 30px 40px;
+}
+/* Order: top-left | top-right | bottom-right | bottom-left */
+</code></pre>
+
+            <hr>
+
+            <strong>Circle:</strong>
+
+            <pre><code>
+/* Perfect Circle (if width = height) */
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: orange;
+}
+</code></pre>
+
+
+            <div class="circle">
+
+            </div>
+
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+        <hr class="hr">
+
+        <section>
+
+            <div>
+                <h3>Margin Collapse in CSS</h3>
+
+                <p><strong>Margin collapse is a behavior in CSS where vertical margins of adjacent elements combine into
+                        a single margin instead of adding together. This happens only with vertical margins (margin-top
+                        and margin-bottom), not horizontal ones.</strong></p>
+
+                <hr>
+
+
+
+
+                <strong>When Does Margin Collapse Happen?</strong> <br> <br>
+
+
+
+                <strong>1. Adjacent sibling elements</strong> <br> <br>
+
+                <strong>Example:</strong>
+
+                <div class="box1">
+                    <p><strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, et ullam tempore
+                            tempora provident magni ducimus illum voluptatibus adipisci dolorum dicta accusantium
+                            tenetur? Doloremque inventore qui in esse, aliquam animi, quibusdam minus iste debitis
+                            consequuntur cupiditate odio. Molestiae, sunt minus.</strong></p>
+                </div>
+                <div class="box2">
+                    <p><strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis velit, consequuntur,
+                            non est iure tenetur magni aliquam deleniti, voluptates dolor odit? Ducimus quis nemo
+                            numquam voluptatibus voluptate autem id, dolor ut aliquam modi, voluptates quia reiciendis
+                            dolore maiores! Unde rem dolor consequuntur facilis voluptatem voluptatum alias atque
+                            dignissimos, similique ipsa.</strong></p>
+                </div>
+
+
+
+                <pre><code>
+&lt;div class="box1"&gt;&lt;/div&gt;
+&lt;div class="box2"&gt;&lt;/div&gt;
+</code></pre>
+
+
+                <pre><code>
+.box1 {
+  margin-bottom: 30px;
+}
+.box2 {
+  margin-top: 20px;
+}
+</code></pre>
+
+                <p><strong>Final margin between them = 30px (not 50px)</strong></p>
+
+
+
+
+
+            </div>
+
+            <hr class="hr">
+
+            <div>
+                <h3>Box-Sizing in CSS</h3>
+
+                <p><strong>The box-sizing property defines how the total width and height of an element is
+                        calculated.</strong></p>
+
+                <hr>
+
+                <p><strong>Default Box Model (Without box-sizing)</strong></p>
+
+                <strong>Syntax:</strong>
+                <p><code>box-sizing: content-box;
+
+                <ul>
+                    <li>The <strong>width</strong> and <strong>height</strong> only include the
+                        <strong>content</strong>.
+                    </li>
+                    <li><strong>Padding</strong> and <strong>border</strong> are added <em>outside</em> this width and
+                        height.</li>
+                </ul>
+
+                
+</code></p>
+
+                <hr>
+
+                <p><strong>Better Model (Common Practice)</strong></p>
+
+                <strong>Syntax:</strong>
+
+                <p><code>box-sizing: border-box;</code></p>
+
+                <ul>
+                    <li>The <strong>width</strong> and <strong>height</strong> include <strong>padding</strong> and
+                        <strong>border</strong>.
+                    </li>
+                    <li>This makes layout easier and more predictable.</li>
+                </ul>
+
+                <hr>
+
+
+
+
+
+
+
+
+                <p><strong>Example:</strong></p>
+
+                <div class="parent">
+
+
+                    <div class="child1">
+
+
+                    </div>
+
+                    <div class="child2">
+
+                    </div>
+                </div>
+
+                <hr>
+
+                <table border="1" cellpadding="8" cellspacing="0">
+
+                    <caption>Summary: box-sizing Comparison</caption>
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th><code>.child1</code> (content-box)</th>
+                            <th><code>.child2</code> (border-box)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Width behavior</td>
+                            <td>Width excludes padding &amp; border</td>
+                            <td>Width includes padding &amp; border</td>
+                        </tr>
+                        <tr>
+                            <td>Total size</td>
+                            <td>Larger than <code>200px</code></td>
+                            <td>Exactly <code>200px</code></td>
+                        </tr>
+                        <tr>
+                            <td>Layout effect</td>
+                            <td>May overflow parent</td>
+                            <td>Stays inside parent</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr>
+
+                <p><strong>Why This Is Useful</strong></p>
+
+                <p><strong>his demo clearly shows why border-box is preferred in modern CSS layout — it makes box sizes
+                        predictable and consistent, especially in responsive designs.</strong></p>
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+        </section>
+
+        <hr class="hr">
+
+        <section>
+            <h2>CHAPTER 4 : Font AND Display:</h2>
+            <div>
+                <h3>I. Display Properties:</h3>
+
+                <p class="bold">In CSS, the display property controls how an element is
+                    displayed on the page — it defines its layout behavior (e.g., block, inline)</p>
+
+                <hr>
+
+                <table border="1" cellpadding="8" cellspacing="0" style="margin-left: 5px;">
+                    <caption style="font-weight:bolder; margin-bottom: 5px;"> Common display Values </caption>
+
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>block</code></td>
+                            <td>Element takes up full width, starts on a new line (e.g., <code>&lt;div&gt;</code>,
+                                <code>&lt;p&gt;</code>).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>inline</code></td>
+                            <td>Element flows with text; width and height can't be set (e.g., <code>&lt;span&gt;</code>,
+                                <code>&lt;a&gt;</code>).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>inline-block</code></td>
+                            <td>Like inline, but allows width and height to be set.</td>
+                        </tr>
+                        <tr>
+                            <td><code>none</code></td>
+                            <td>Hides the element completely — it doesn't occupy space.</td>
+                        </tr>
+                        <tr>
+                            <td><code>visibility: hidden</code></td>
+                            <td><strong>Not a display value</strong>. Hides the element visually, but it still takes up
+                                space in layout.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr>
+
+                <p class="bold">Examole:</p>
+
+                <p><a href="Practice Set4.html">Display Properties</a></p>
+            </div>
+
+            <hr class="hr">
+
+            <div>
+
+                <div>
+
+                    <h3 class="center">II. Text-align Property</h3>
+                </div>
+
+
+
+                <div>
+                    <p class="bold">The text-align property in CSS is used to set the horizontal alignment of text
+                        inside a
+                        block element.</p>
+                </div>
+
+                <hr>
+
+                <div>
+
+                    <p class="bold">Syntax:</p>
+
+                    <pre class="bold"><code>
+    selector {
+      text-align: value;
+    }
+    </code></pre>
+                </div>
+
+
+                <hr>
+
+                <div>
+
+                    <table border="1" cellpadding="8" cellspacing="0" style="margin-left: 5px;">
+                        <caption class="bold">Common Values</caption>
+                        <thead>
+                            <tr>
+                                <th>Value</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>left</code></td>
+                                <td>Aligns text to the <strong>left</strong> (default for LTR languages).</td>
+                            </tr>
+                            <tr>
+                                <td><code>right</code></td>
+                                <td>Aligns text to the <strong>right</strong>.</td>
+                            </tr>
+                            <tr>
+                                <td><code>center</code></td>
+                                <td>Centers the text <strong>horizontally</strong>.</td>
+                            </tr>
+                            <tr>
+                                <td><code>justify</code></td>
+                                <td>Stretches lines so that each line has <strong>equal width</strong> (like
+                                    newspapers).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code>start</code></td>
+                                <td>Aligns text to the start of the writing direction (left in LTR, right in RTL).</td>
+                            </tr>
+                            <tr>
+                                <td><code>end</code></td>
+                                <td>Aligns text to the end of the writing direction.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+                <hr>
+
+                <div>
+
+                    <p class="bold">Example:</p>
+
+                    <pre><code>
+    &lt;p style="text-align: left;"&gt;This text is left-aligned.&lt;/p&gt;
+    &lt;p style="text-align: right;"&gt;This text is right-aligned.&lt;/p&gt;
+    &lt;p style="text-align: center;"&gt;This text is centered.&lt;/p&gt;
+    &lt;p style="text-align: justify;"&gt;
+      This is justified text. It adjusts the spacing between words so that the lines of text are evenly aligned along both the left and right margins. This is often used in newspapers or books for a clean edge.
+    &lt;/p&gt;
+    &lt;p style="text-align: start;"&gt;This text is start-aligned (depends on writing direction).&lt;/p&gt;
+    &lt;p style="text-align: end;"&gt;This text is end-aligned (depends on writing direction).&lt;/p&gt;
+    </code></pre>
+                </div>
+
+
+                <hr>
+
+                <div class="text-align">
+
+                    <p style="text-align: left;">This text is left-aligned.</p>
+                    <p style="text-align: right;">This text is right-aligned.</p>
+                    <p style="text-align: center;">This text is centered.</p>
+                    <p style="text-align: justify;">
+                        This is justified text. It adjusts the spacing between words so that the lines of text are
+                        evenly aligned along both the left and right margins. This is often used in newspapers or books
+                        for a clean edge.
+                    </p>
+                    <p style="text-align: start;">This text is start-aligned (depends on writing direction).</p>
+                    <p style="text-align: end;">This text is end-aligned (depends on writing direction).</p>
+                </div>
+            </div>
+
+            <hr class="hr">
+
+            <div class="c4">
+                <div>
+
+                    <h3 class="center">III. Text Decoration Properties:</h3>
+
+                    <p class="bold">In CSS, the text-decoration property and its related sub-properties are used to add
+                        decorative lines to text, like underlines, overlines, or strikethroughs. Here's a breakdown:</p>
+                </div>
+
+                <hr>
+
+                <div>
+
+
+                    <p class="bold">Syntax:</p>
+
+                    <table border="1" cellpadding="8" cellspacing="0">
+                        <caption>Common Values:</caption>
+                        <thead>
+                            <tr>
+                                <th>Value</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>none</code></td>
+                                <td>No decoration</td>
+                            </tr>
+                            <tr>
+                                <td><code>underline</code></td>
+                                <td>Adds a line <strong>below</strong> the text</td>
+                            </tr>
+                            <tr>
+                                <td><code>overline</code></td>
+                                <td>Adds a line <strong>above</strong> the text</td>
+                            </tr>
+                            <tr>
+                                <td><code>line-through</code></td>
+                                <td>Adds a line <strong>through</strong> the text (strike)</td>
+                            </tr>
+                            <tr>
+                                <td><code>blink</code></td>
+                                <td>Makes the text <strong>blink</strong> <em>(rarely supported)</em></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div>
+                    <p class="bold">Newer Shorthand: text-decoration</p>
+
+                   
+
+                    <pre><code>
+selector {
+  text-decoration: &lt;line&gt; &lt;color&gt; &lt;style&gt; &lt;thickness&gt;;
+}
+</code></pre>
+
+                    <hr>
+
+                    <p class="bold">This shorthand includes:</p>
+
+                    <ul>
+                        <li>line (e.g., <code>underline, overline, line-through, none</code>)</li>
+                        <li>color (e.g., <code>red, blue , green</code>)</li>
+                        <li>style (e.g., <code>solid, dashed, dotted, wavy, double</code>)</li>
+                        <li>thickness (e.g., <code>2px</code>)</li>
+                    </ul>
+
+                    <hr>
+
+
+
+                    <pre><code>
+    text-decoration: underline red wavy 2px;
+    text-decoration: line-through green double 3px;
+    text-decoration: overline blue dashed 1.5px;
+    </code></pre>
+                </div>
+
+                <hr>
+
+                <div>
+                    <p class="bold">Example:</p>
+                    <pre><code>&lt;p style="text-decoration: underline red wavy 2px;"&gt;
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro inventore magni, aut vitae iusto quis deserunt iste quas aspernatur reiciendis?
+&lt;/p&gt;
+
+&lt;p style="text-decoration: line-through green double 3px;"&gt;
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro inventore magni, aut vitae iusto quis deserunt iste quas aspernatur reiciendis?
+&lt;/p&gt;
+
+&lt;p style="text-decoration: overline blue dashed 1.5px;"&gt;
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro inventore magni, aut vitae iusto quis deserunt iste quas aspernatur reiciendis?
+&lt;/p&gt;
+</code></pre>
+
+
+                    <hr>
+                    <p style="text-decoration: underline red wavy 2px">Lorem ipsum dolor sit amet consectetur,
+                        adipisicing elit. Porro inventore magni, aut vitae iusto quis deserunt iste quas aspernatur
+                        reiciendis?</p>
+
+                    <p style="text-decoration: line-through green double 3px;">Lorem ipsum dolor sit amet
+                        consectetur, adipisicing elit. Porro inventore magni, aut vitae iusto quis deserunt iste
+                        quas aspernatur reiciendis?</p>
+
+                    <p style="text-decoration: overline blue dashed 1.5px;">Lorem ipsum dolor sit amet consectetur,
+                        adipisicing elit. Porro inventore magni, aut vitae iusto quis deserunt iste quas aspernatur
+                        reiciendis?</p>
+
+                </div>
+            </div>
+
+
+
+
+
+            </div>
+        </section>
 
 
 

@@ -1,5 +1,4 @@
 
-
 #main-heading {
   color: blue;
   text-align: center;
@@ -20,29 +19,190 @@
 
 /* Practice Set 1 queastion 2 */
 
-#head{
+#head {
   background-color: blue;
 }
 
 /* Practice Set 1 queastion 3 */
 
-.one{
+.one {
   background-color: black;
   color: white;
 }
 
 /* Practice Set 1 queastion 4 */
 
-.two{
+.two {
   background-color: black;
   color: rgb(255, 53, 225);
 }
 
 
-body{
-  background-image: url("../img/lap.gif");
+body {
+
+  border: 5px solid #101010;
+  /* background-image: url("../img/kitty.gif"); */
+  /* background-image: url("https://images.pexels.com/photos/33201405/pexels-photo-33201405.jpeg?_gl=1*est1x2*_ga*MTMyNDU1MDgyOS4xNzUzODEwNDkx*_ga_8JE65Q40S6*czE3NTQxODU2MDYkbzIkZzEkdDE3NTQxODU5NzUkajMxJGwwJGgw"); */
   background-repeat: no-repeat;
-  background-size: auto;
+  /* background-repeat: repeat; */
+  /* background-repeat: repeat-x; */
+  /* background-repeat: repeat-y; */
+  /* background-repeat: space; */
+  /* background-repeat: round; */
+
+
+
+  /* background-size: auto; → Keeps the image's original size */
+  /* background-size: auto; */
+
+  /* background-size: cover; → Stretches image to cover the element (may crop) */
+  background-size: cover;
+
+  /* background-size: contain; → Scales image to fit the element (no cropping) */
+  /* background-size: contain; */
+
+  /* background-size: 200px 150px; → Custom width and height for image */
+  /* background-size: 200px 150px; */
+
+  /* background-size: 100% auto; → Full width, height adjusts automatically */
+  /* background-size: 100% auto; */
+
+
+
+  /* background-position: left top; */
+  /* Top-left corner (default) */
+  /* background-position: center center; */
+  /* Center of the element */
+  /* background-position: right bottom; */
+  /* Bottom-right corner */
+  /* background-position: 50% 50%; */
+  /* Same as center center */
+  /* background-position: 10px 20px; */
+  /* 10px from the left, 20px from the top */
+  /* background-position: right 20px; */
+  /* Left edge, 20px from the top */
+  /* background-position: 20% 80%; */
+  /* 20% across and 80% down from the top-left corner */
+
+
+  background-attachment: fixed;
+
+  overflow: auto;
+
+
+
+
+
+
+
+}
+
+.bg {
+
+  background-image: url("https://images.pexels.com/photos/33201405/pexels-photo-33201405.jpeg?_gl=1*est1x2*_ga*MTMyNDU1MDgyOS4xNzUzODEwNDkx*_ga_8JE65Q40S6*czE3NTQxODU2MDYkbzIkZzEkdDE3NTQxODU5NzUkajMxJGwwJGgw");
+
+  background-size: cover;
+
+  height: 600px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  overflow: auto;
 }
 
 
+.hr {
+
+  color: #EFBF04;
+
+
+
+  border: solid;
+}
+
+.border {
+
+  margin-left: 10px;
+
+  border-top: 2px solid green;
+  border-right: 4px dotted blue;
+  border-bottom: 3px double red;
+  border-left: none;
+
+  height: 300px;
+  width: 300px;
+
+
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: orange;
+}
+
+
+.box1 {
+  background: darkmagenta;
+  margin-bottom: 30px;
+}
+
+.box2 {
+  background-color: darkorange;
+  margin-top: 20px;
+}
+
+.parent {
+  width: 200px;
+  border: 5px solid rgb(3, 245, 116);
+  height: 200px;
+  margin-left: 2px;
+}
+
+.child1 {
+
+  width: 200px;
+  padding: 20px;
+  border: 5px solid rgb(10, 63, 235);
+  box-sizing: content-box;
+  margin-top: 5px;
+
+  
+
+
+}
+
+.child2 {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid rgb(235, 10, 66);
+  box-sizing: border-box;
+  margin-top: 5px;
+
+}
+
+
+.bold{
+
+  font-size:large; 
+  font-weight: bold;
+}
+
+.center{
+
+  text-align: center;
+}
+
+
+
+div {
+  padding: 10px;
+  margin: 10px;
+  border: 5px solid #192a6e;
+
+}
+
+.c4{
+  border-color: rgb(244, 115, 10);
+
+}

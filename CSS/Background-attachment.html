@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 60px;
+    }
+
+    .demo {
+      height: 200px;
+      overflow: auto;
+      color: black;
+      font-size: 20px;
+      padding: 20px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 40px;
+      border: 2px solid #ccc;
+    }
+
+    .scroll {
+      background-image: url("../img/kitty.gif");
+      background-attachment: scroll;
+    }
+
+    .fixed {
+      background-image: url("../img/kitty.gif");
+      background-attachment: fixed;
+    }
+
+    .local {
+       background-image: url("../img/kitty.gif");
+      background-attachment: local;
+    }
+
+    .content {
+      height: 600px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>background-attachment Comparison</h1>
+
+  <h2>1. background-attachment: scroll (default)</h2>
+  <div class="demo scroll">
+    This background scrolls with the page (default behavior).
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique incidunt dignissimos quam odit consectetur quis pariatur beatae placeat! Molestiae, unde! Repellat nesciunt autem voluptate, tenetur nam ullam consectetur nisi eaque.
+    </p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit unde iste quidem voluptatum doloremque enim excepturi sed velit temporibus qui, sapiente ad optio sint culpa a! Nam, aliquam! Perspiciatis, aliquid!</p>
+    <div class="content"></div>
+  </div>
+
+  <h2>2. background-attachment: fixed</h2>
+  <div class="demo fixed">
+    This background stays fixed in the viewport while you scroll the page.
+    <div class="content"></div>
+  </div>
+
+  <h2>3. background-attachment: local</h2>
+  <div class="demo local">
+    This background scrolls with the content inside this box.
+    <div class="content"></div>
+  </div>
+
+  
+</body>
+</html>
