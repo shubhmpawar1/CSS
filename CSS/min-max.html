@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>min-max height-width</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+
+        header {
+
+            padding: 2vw;
+            margin: 1vh;
+            text-align: center;
+            background-color: black;
+            color: white;
+            border-radius: 2vh;
+
+
+
+
+
+        }
+
+
+
+        header p {
+            margin-top: 10px;
+        }
+
+        .topic {
+            margin: 1vh;
+            padding: 2vw;
+            background-color: black;
+            color: white;
+            border-radius: 2vh;
+        }
+
+        .topic h2 {
+            text-align: center;
+            color: gold;
+        }
+
+        .topic ul {
+            margin-bottom: 2vh;
+        }
+
+        .topic li {
+            margin: 2vh;
+
+
+        }
+
+        .topic p {
+            margin-top: 5px;
+            text-align: center;
+
+        }
+
+        pre {
+            background: #333;
+            color: #0f0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+
+
+        }
+
+        .width-card {
+            margin: 1vh;
+            background-color: blueviolet;
+            min-width: 200px;
+            /* can't be smaller than 200px */
+            max-width: 600px;
+            /* can't be larger than 600px */
+            overflow-x: auto;
+            /* adds scroll if content exceeds max-width */
+            line-height: 50px;
+            border: 2px dashed white;
+        }
+
+        .height-card {
+            margin: 1vh;
+            min-height: 100px;
+            max-height: 200px;
+            background-color: blueviolet;
+            overflow-y: auto;
+            /* adds scroll if content exceeds max-height */
+            line-height: 50px;
+            border: 2px dashed white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>min-max (height-width)</h1>
+
+        <P>Min-max properties in CSS are settings that define the smallest (min-) and largest (max-) size an element can
+            have, for either width or height.</P>
+    </header>
+
+    <main>
+        <div class="topic">
+            <h2>1. min-width / max-width</h2>
+
+            <ul>
+                <li><strong>min-width</strong> → The smallest width an element can be.</li>
+                <li><strong>max-width</strong> → The largest width an element can be.</li>
+                <li>Useful for responsive layouts — prevents elements from becoming too narrow or too wide.</li>
+            </ul>
+
+            <pre><code>.card {
+  min-width: 200px;  /* can't be smaller than 200px */
+  max-width: 600px;  /* can't be larger than 600px */
+}
+</code></pre>
+
+            <p>Example:</p>
+
+            <div class="width-card">
+                min-width: 200px;
+                max-width: 600px;
+            </div>
+
+
+        </div>
+
+        <div class="topic">
+            <h2>2. min-height / max-height</h2>
+
+            <ul>
+                <li>min-height → The smallest height an element can have.</li>
+                <li>max-height → The tallest an element can be.</li>
+                <li>Common for scrollable areas — lets content grow up to a limit before scrolling.</li>
+            </ul>
+
+            <p>Example:</p>
+
+            <pre><code>.chat-box {
+  min-height: 100px;
+  max-height: 200px;
+  overflow-y: auto; /* adds scroll if content exceeds max-height */
+}
+</code></pre>
+
+            <div class="height-card">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam laboriosam voluptatibus quo, animi
+                mollitia tempora ea. Unde numquam amet fuga ex, quos libero laudantium necessitatibus excepturi quae
+                commodi iure vero ullam repellendus dicta iste a ad quia tempora fugiat nobis atque labore est? Aliquid
+                odio animi eveniet neque, nobis, est rerum distinctio provident hic sint omnis deleniti libero
+                asperiores commodi consectetur cum soluta magnam. Impedit nostrum facilis quidem minus earum odit magni
+                consequuntur repellendus sint blanditiis voluptatum quod aperiam minima molestias ex inventore nobis qui
+                provident, neque debitis iste voluptas perferendis nemo? Labore temporibus optio ipsum dolorem illo
+                voluptatum? Labore dolore ea accusamus nostrum reprehenderit iste illo sequi nobis aliquid! Labore nulla
+                mollitia quae deleniti repellendus incidunt. Nihil blanditiis similique alias commodi id libero iste
+                accusamus corrupti rerum natus distinctio recusandae, delectus assumenda! Voluptatibus quidem sint
+                excepturi quae minus! Minima obcaecati eligendi molestias. Possimus ipsum consectetur suscipit natus
+                dolorum quidem veritatis culpa corrupti? Voluptas, sapiente. Distinctio, incidunt placeat? Beatae sunt
+                commodi iure dicta, repudiandae molestias nulla distinctio, asperiores aut, voluptas illum odio ut.
+                Tempora iure optio incidunt quod enim eum, voluptatem dolor adipisci aliquid accusantium deleniti
+                temporibus libero sed magni. Inventore, totam nihil neque saepe expedita ducimus veritatis! Repudiandae
+                at dicta saepe omnis? Quia consequuntur voluptates magni accusantium nulla animi odit suscipit nisi!
+                Repellendus, iusto expedita sequi distinctio totam vero corporis necessitatibus cumque veritatis fuga
+                perspiciatis ducimus rerum! Facere iusto, illo possimus unde distinctio eligendi error fugiat aliquam
+                culpa dignissimos rem! Adipisci id nam error, dolorum qui quis doloremque at, inventore, impedit aliquam
+                necessitatibus officia sit. Quod, tenetur delectus blanditiis natus iusto adipisci eius fugiat, nemo
+                sunt reprehenderit fuga necessitatibus et illum. Debitis, sint vero inventore consectetur quis sed
+                maxime quidem! Quas facilis illo iusto, a assumenda suscipit libero laboriosam inventore quos dolores,
+                nam provident delectus reprehenderit tenetur quis neque ea saepe fugit. Possimus ipsam tenetur dolorum
+                voluptatem repellat natus, libero deserunt officia iste laborum iusto rerum rem accusantium minima
+                facere voluptas. Rem incidunt cumque molestias commodi sequi dolores exercitationem nemo laboriosam
+                itaque, cum aperiam quam tempora fuga ratione? Necessitatibus, commodi autem. Dolore ab, maxime numquam
+                corporis nemo quasi animi aut dolores culpa accusantium, cupiditate eveniet quo fuga, labore ratione et
+                voluptatibus debitis minus architecto sed! Optio, odit vel! Aliquam sed nisi illo nulla cumque sapiente,
+                ea tempora quae magnam aspernatur esse! Fugit animi quod temporibus eius voluptate voluptatum ipsam
+                harum, architecto quos consectetur quas possimus maxime placeat aliquam ab.
+            </div>
+
+        </div>
+
+        <div class="topic">
+            <h2>Why They’re Useful</h2>
+
+            <ul>
+                <li>Responsive design: Works great with %, vw, vh, or clamp() values.</li>
+                <li>Prevent layout breaking: Stops buttons, text boxes, and images from becoming unusably small or
+                    awkwardly large.</li>
+                <li>Control over resizing: Especially important in flexbox or grid layouts.</li>
+            </ul>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

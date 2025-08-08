@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-index</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            padding: 2vw;
+            margin: 1vh;
+            text-align: center;
+            background-color: black;
+            color: white;
+            border-radius: 2vh;
+        }
+
+        header p {
+            margin-top: 10px;
+        }
+
+        .topic {
+            margin: 1vh;
+            padding: 2vw;
+            background-color: black;
+            color: white;
+            border-radius: 2vh;
+        }
+
+        .topic h2 {
+            text-align: center;
+            color: gold;
+        }
+
+        .topic ul {
+            margin-bottom: 2vh;
+        }
+
+        .topic li {
+            margin: 2vh;
+
+
+        }
+
+        .topic p {
+            margin-top: 5px;
+            text-align: center;
+
+        }
+
+        pre {
+            background: #333;
+            color: #0f0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>z-index</h1>
+
+        <ul>
+            <li>The z-index property controls the stacking order of elements on a web page along the z-axis (depth).
+            </li>
+            <li>It determines which elements appear on top of others when they overlap.</li>
+        </ul>
+
+    </header>
+
+    <main>
+        <div class="topic">
+            <h2>How does it work?</h2>
+            <ul>
+                <li>Elements with a higher z-index value appear in front of elements with a lower value.</li>
+                <li>Only works on elements with a position value of relative, absolute, fixed, or sticky.</li>
+                <li>Default z-index is auto (usually 0).</li>
+            </ul>
+
+            <p>Important notes</p>
+
+            <ul>
+  <li>z-index only affects stacking of elements that are positioned (position not static).</li>
+  <li>Negative z-index can send elements behind others.</li>
+  <li>If two positioned elements have the same z-index, the one later in the HTML code stacks on top.</li>
+  <li>z-index works within stacking contexts — parents with z-index create new stacking contexts affecting children.</li>
+</ul>
+
+<p>Example:</p>
+
+<a href="z-index-example.html">Example For Z-index</a>
+
+
+
+
+         
+
+        </div>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .table{
+            background: #333;
+            color: white;
+
+            
+            
+        }
+
+        pre {
+            background: #333;
+            color: #0f0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        main {
+            margin: 3vh;
+            padding: 4vw;
+        }
+
+        .container {
+            background-color: bisque;
+
+        }
+
+        .box1 {
+
+            margin: 1vh;
+            padding: 2vw;
+            background-color: black;
+            color: white;
+        }
+
+        .box2 {
+            margin: 1vh;
+            padding: 2vw;
+            background-color: rgb(94, 129, 0);
+            color: white;
+
+        }
+
+        .h {
+            margin-bottom: 1vh;
+        }
+
+        .topic {
+            margin: 1vh;
+            padding: 2vw;
+            background-color: black;
+            color: white;
+            border-radius: 2vh;
+
+        }
+
+        .topic h2 {
+            margin-bottom: 15px;
+            text-align: center;
+            color: #FFA500;
+        }
+
+        .topic ul {
+            margin-bottom: 2vh;
+        }
+
+        .topic li {
+            margin: 2vh;
+
+
+        }
+
+        .px-box {
+            margin-top: 10px;
+            background-color: blueviolet;
+            text-align: center;
+            width: 200px;
+            height: 50px;
+            color: white;
+            line-height: 50px;
+            border: 2px dashed white;
+        }
+
+        .example {
+            margin-top: 2vh;
+            margin-bottom: 3vh;
+            text-align: center;
+
+        }
+
+        .parent {
+            margin: 1%;
+            padding: 1%;
+            background-color: blueviolet;
+            text-align: center;
+            height: 200%;
+            width: 83%;
+            border: white dashed 2px;
+        }
+
+        .child {
+            margin: 1%;
+            padding: 1%;
+            background-color: red;
+            text-align: center;
+            height: 200%;
+            width: 83%;
+            border: white dashed 2px;
+        }
+
+        .em-body {
+            margin: 2em;
+
+            background-color: blueviolet;
+            text-align: center;
+            height: 7.5em;
+            width: 28em;
+            font-size: 16px;
+            border: white dashed 2px;
+            text-align: center;
+        }
+
+        .em-paragraph {
+            margin: 10px;
+            background-color: red;
+            text-align: center;
+            height: 49px;
+            width: 363px;
+            box-sizing: border-box;
+            font-size: 2em;
+            border: white dashed 2px;
+        }
+
+        .rem-parent {
+            background-color: blueviolet;
+            text-align: center;
+            margin: 2em;
+            padding: 2em;
+            background-color: blueviolet;
+            text-align: center;
+            height: 10.5em;
+            width: 46em;
+
+            border: white dashed 2px;
+
+
+        }
+
+        .rem-child {
+            margin: 10px;
+            background-color: red;
+            text-align: center;
+            height: 66px;
+            width: 654px;
+            box-sizing: border-box;
+            font-size: 2rem;
+            border: white dashed 2px;
+
+        }
+
+        .vh-vw-box {
+            margin: 10px;
+            background-color: red;
+            text-align: center;
+            height: 100vh;
+            width: 50vw;
+
+            font-size: 2rem;
+            border: white dashed 2px;
+        }
+    </style>
+    <title>Size, Position, Lists </title>
+</head>
+
+<body>
+    <header>
+        <h1>Size, Position & Lists</h1>
+    </header>
+    <main>
+
+        <div class="topic">
+            <h2 class="h">1. px – Pixels (Fixed Size)</h2>
+
+            <ul>
+                <li>Definition: A pixel is a fixed unit representing a single dot on the screen.</li>
+                <li>Use Case: Best for precise control (e.g., borders, spacing, icons).</li>
+                <li>Responsive? ❌ Not responsive. Doesn't scale with screen size
+                </li>
+            </ul>
+
+
+
+
+
+            <p class="example"><strong>Example:</strong></p>
+
+
+
+            <pre><code>div {
+  width: 200px;  /* Always 200 pixels wide */
+}
+</code></pre>
+
+
+
+            <div class="px-box">
+                <p><strong>200px wide</strong></p>
+            </div>
+
+        </div>
+
+        <div class="topic">
+            <h2>2. % – Percentage of Parent Element</h2>
+
+            <ul>
+                <li><strong>Definition:</strong> A relative unit. The size is calculated as a percentage of
+                    the parent
+                    element's size.</li>
+                <li><strong>Use Case:</strong> Makes layouts fluid and adaptable.</li>
+                <li><strong>Responsive?</strong> ✅ Yes, responds to parent size.</li>
+            </ul>
+
+
+
+            <p class="example"><strong>Example:</strong></p>
+
+            <pre><code>
+.parent {
+  width: 400px;
+}
+
+.child {
+  width: 50%;  /* 50% of 400px = 200px */
+}
+</code></pre>
+
+            <div class="parent">
+                <p><strong>Parent div</strong></p>
+
+                <div class="child">
+                    Child div
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="topic">
+            <h2>3. em – Relative to Parent Font Size</h2>
+
+            <ul>
+                <li>Definition: Relative to the font-size of the parent element.</li>
+                <li>1em = current font size.</li>
+                <li>Use Case: Good for scaling paddings, margins, or font-size relative to surrounding text.
+                </li>
+                <li>Responsive? ✅ Depends on parent.</li>
+            </ul>
+
+
+
+            <p class="example">Example:</p>
+
+            <pre><code>
+body {
+  font-size: 16px;
+}
+
+p {
+  font-size: 1.5em; /* 1.5 × 16px = 24px */
+}
+</code></pre>
+
+            <div class="em-body">
+                <p>Parent font size (16px) </p>
+
+                <div class="em-paragraph">
+                    <p>Child font size (1.5em)</p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="topic">
+            <h2>4. rem – Relative to Root Font Size</h2>
+
+            <ul>
+                <li>Definition: Relative to the root (<code>html</code>) font-size, not the parent.</li>
+                <li>Use Case: More consistent scaling than <code>em</code>.</li>
+                <li>Responsive? ✅ Yes, based on root size (easy to manage across the site).</li>
+            </ul>
+
+            <p class="example">Example:</p>
+
+            <pre>
+<code>
+html {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 2rem; /* 2 × 16px = 32px */
+}
+</code>
+</pre>
+
+            <div class="rem-parent">
+                Root Element [Html] Font Size 16px.
+
+                <div class="rem-child">
+                    Child Box font-size: 2rem; 2 × 16px = 32px
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="topic">
+            <h2>5.vw & vh – Viewport Width / Height</h2>
+
+            <ul>
+                <li>1vw = 1% of the viewport width</li>
+                <li>1vh = 1% of the viewport height</li>
+                <li>Use Case: Responsive designs that adapt to screen size regardless of container or parent.</li>
+                <li>Responsive? ✅ Highly responsive.</li>
+            </ul>
+
+            <p class="example">Example:</p>
+
+            <pre><code>
+div {
+  width: 50vw;  /* 50% of the browser width */
+  height: 100vh; /* Full screen height */
+}
+</code></pre>
+
+            <div class="vh-vw-box">
+                width: 50vw; 50% of the browser width
+                height: 100vh; Full screen height
+
+            </div>
+
+
+
+
+        </div>
+
+        <div class="topic">
+            <table  border="5px solid gold" cellpadding="2px" cellspacing="4px" class="table">
+                <caption>Quick Comparison Table:</caption>
+                <thead>
+                    <tr>
+                        <th>Unit</th>
+                        <th>Type</th>
+                        <th>Relative To</th>
+                        <th>Responsive</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>px</td>
+                        <td>Absolute</td>
+                        <td>None (fixed)</td>
+                        <td>❌</td>
+                        <td>width: 200px;</td>
+                    </tr>
+                    <tr>
+                        <td>%</td>
+                        <td>Relative</td>
+                        <td>Parent element</td>
+                        <td>✅</td>
+                        <td>width: 50%;</td>
+                    </tr>
+                    <tr>
+                        <td>em</td>
+                        <td>Relative</td>
+                        <td>Parent's font-size</td>
+                        <td>✅</td>
+                        <td>font-size: 1.2em;</td>
+                    </tr>
+                    <tr>
+                        <td>rem</td>
+                        <td>Relative</td>
+                        <td>Root (html) font-size</td>
+                        <td>✅</td>
+                        <td>font-size: 1.5rem;</td>
+                    </tr>
+                    <tr>
+                        <td>vw</td>
+                        <td>Relative</td>
+                        <td>Viewport width</td>
+                        <td>✅</td>
+                        <td>width: 80vw;</td>
+                    </tr>
+                    <tr>
+                        <td>vh</td>
+                        <td>Relative</td>
+                        <td>Viewport height</td>
+                        <td>✅</td>
+                        <td>height: 100vh;</td>
+                    </tr>
+                    <tr>
+                        <td>auto</td>
+                        <td>Keyword</td>
+                        <td>Content/context</td>
+                        <td>⚠️ depends</td>
+                        <td>width: auto;</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+
+
+
+
+
+
+
+
+    </main>
+</body>
+
+</html>

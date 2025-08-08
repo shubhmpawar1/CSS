@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            padding: 2vw;
+            margin: 1vh;
+            text-align: center;
+            background-color: black;
+            color: white;
+            border-radius: 2vh;
+        }
+
+        header p {
+            margin-top: 10px;
+        }
+
+        .topic {
+            margin: 1vh;
+            padding: 2vw;
+            background-color: black;
+            color: white;
+            border-radius: 2vh;
+        }
+
+        .topic h2 {
+            text-align: center;
+            color: gold;
+        }
+
+        .topic ul {
+            margin-bottom: 2vh;
+        }
+
+        .topic li {
+            margin: 2vh;
+
+
+        }
+
+        .topic p {
+            margin-top: 5px;
+            text-align: center;
+
+        }
+
+        pre {
+            background: #333;
+            color: #0f0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+
+
+        }
+
+        .relative-box1 {
+            background-color: blueviolet;
+            width: 10vw;
+            height: 15vh;
+            line-height: 50px;
+            border: 2px dashed white;
+        }
+
+        .relative-box2 {
+            background-color: blueviolet;
+            width: 10vw;
+            height: 15vh;
+            position: relative;
+            top: 10px;
+            /* moves the element 10px down from its normal spot */
+            left: 30px;
+            /* moves the element 5px to the right */
+            line-height: 50px;
+            border: 2px dashed white;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            background-color: blueviolet;
+            width: 10vw;
+            height: 15vh;
+            line-height: 50px;
+            border: 2px dashed white;
+
+        }
+
+        .fixed-box {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            background-color: blueviolet;
+            width: 20vw;
+            height: 15vh;
+            line-height: 50px;
+            border: 2px dashed white;
+        }
+
+        .sticky-box {
+            margin: 1vh;
+            padding: 1vh;
+            position: sticky;
+            bottom: 0;
+            /* sticks to the bottom when you scroll */
+            background-color: blueviolet;
+            width: 20vw;
+            height: 20vh;
+            line-height: 50px;
+            border: 2px dashed white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>CSS Position.</h1>
+        <p>In CSS, the position property specifies how an element is positioned in a document. There are several types
+            of positioning:</p>
+    </header>
+
+    <main>
+        <div class="topic">
+            <h2>1. static (default)</h2>
+
+
+            <ul>
+                <li>The element follows the normal flow of the page.</li>
+                <li>top, left, right, bottom properties have no effect.</li>
+            </ul>
+
+            </p>
+        </div>
+
+        <div class="topic">
+            <h2>2. relative</h2>
+
+            <ul>
+                <li>The element is positioned relative to its normal position.</li>
+                <li>You can use top, left, right, bottom to move it relative to where it would normally be.</li>
+            </ul>
+
+            <pre><code>position: relative;
+top: 20px;  /* moves the element 10px down from its normal spot */
+left: 30px; /* moves the element 5px to the right */
+</code></pre>
+
+
+
+            <p>Example:</p>
+
+            <div class="relative-box1">
+                This Original Position
+            </div>
+
+            <div class="relative-box2">
+                after
+                top: 20px;
+                left: 30px;
+            </div>
+
+
+        </div>
+
+        <div class="topic">
+            <h2>3. absolute</h2>
+
+            <ul>
+                <li>The element is taken out of the normal page flow. Other elements will behave as if it’s not there.
+                </li>
+                <li>You can place the element exactly where you want by using top, left, right, and bottom values.</li>
+                <li>It moves relative to the closest parent element that has a position other than static. If no parent
+                    has a position set, it will position itself relative to the whole page (the browser window).</li>
+            </ul>
+
+            <pre><code>position: absolute;
+top: 20px;
+right: 10px;
+</code></pre>
+
+            <p>Example:</p>
+
+            <div class="absolute-box">
+                The element is taken out of the normal page flow.
+
+            </div>
+
+        </div>
+
+        <div class="topic">
+            <h2>4. fixed</h2>
+
+            <ul>
+                <li>The element is positioned relative to the viewport.</li>
+                <li>It stays in the same place even when the page is scrolled.</li>
+                <li>Removed from normal document flow.</li>
+            </ul>
+
+            <pre><code>
+position: fixed;
+bottom: 0;
+right: 0;
+
+            </code></pre>
+            <p>Example:</p>
+
+            <div class="fixed-box">
+                position: fixed;
+                bottom: 0;
+                right: 0;
+
+            </div>
+
+        </div>
+
+        <div class="topic">
+            <h2>5. sticky</h2>
+            <ul>
+                <li>The element acts like it’s normally positioned (like relative) at first.</li>
+                <li>But when you scroll the page and the element reaches a certain spot (like the top of the screen), it
+                    sticks there — it stays fixed in place.</li>
+                <li>Once you scroll back up, it goes back to normal flow.</li>
+            </ul>
+
+            <pre><code>position: sticky;
+top: 0;  /* sticks to the top when you scroll */
+</code></pre>
+
+            <div class="sticky-box">
+                position: sticky;
+                bottom: 0; /* sticks to the bottom when you scroll */
+
+            </div>
+
+
+        </div>
+    </main>
+
+</body>
+
+</html>
