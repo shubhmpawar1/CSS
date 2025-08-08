@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        pre {
+            background: #333;
+            color: #0f0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        main {
+            margin: 3vh;
+            padding: 4vw;
+        }
+
+        .container {
+            background-color: bisque;
+
+        }
+
+        .box1 {
+
+            margin: 1vh;
+            padding: 2vw;
+            background-color: black;
+            color: white;
+        }
+
+        .box2 {
+            margin: 1vh;
+            padding: 2vw;
+            background-color: rgb(94, 129, 0);
+            color: white;
+
+        }
+
+        .h {
+            margin-bottom: 1vh;
+        }
+
+        .topic {
+            margin: 1vh;
+            padding: 2vw;
+            background-color: black;
+            color: white;
+            border-radius: 2vh;
+
+        }
+
+        .topic h2 {
+            margin-bottom: 15px;
+            text-align: center;
+            color: #FFA500;
+        }
+
+        .topic ul {
+            margin-bottom: 2vh;
+        }
+
+        .li {
+            margin: 2vh;
+
+
+        }
+
+        .px-box {
+            margin-top: 10px;
+            background-color: blueviolet;
+            text-align: center;
+            width: 200px;
+            height: 50px;
+            color: white;
+            line-height: 50px;
+            border: 2px dashed white;
+        }
+
+        .example {
+            margin-top: 2vh;
+            margin-bottom: 3vh;
+
+        }
+
+        .parent {
+            margin: 1%;
+            padding: 1%;
+            background-color: blueviolet;
+            text-align: center;
+            height: 200%;
+            width: 83%;
+            border: white dashed 2px;
+        }
+
+        .child {
+            margin: 1%;
+            padding: 1%;
+            background-color: red;
+            text-align: center;
+            height: 200%;
+            width: 83%;
+            border: white dashed 2px;
+        }
+
+        .em-body {
+            margin: 2em;
+
+            background-color: blueviolet;
+            text-align: center;
+            height: 7.5em;
+            width: 28em;
+            font-size: 16px;
+            border: white dashed 2px;
+            text-align: center;
+        }
+
+        .em-paragraph {
+            margin: 10px;
+            background-color: red;
+            text-align: center;
+            height: 49px;
+            width: 363px;
+            box-sizing: border-box;
+            font-size: 2em;
+            border: white dashed 2px;
+        }
+    </style>
+    <title>Size, Position, Lists </title>
+</head>
+
+<body>
+    <header>
+        <h1>Size, Position & Lists</h1>
+    </header>
+    <main>
+
+        <div class="topic">
+            <h2 class="h">1. px – Pixels (Fixed Size)</h2>
+
+            <ul>
+                <li class="li">Definition: A pixel is a fixed unit representing a single dot on the screen.</li>
+                <li class="li">Use Case: Best for precise control (e.g., borders, spacing, icons).</li>
+                <li class="li">Responsive? ❌ Not responsive. Doesn't scale with screen size
+                </li>
+            </ul>
+
+
+
+
+
+            <p class="example"><strong>Example:</strong></p>
+
+
+
+            <pre><code>div {
+  width: 200px;  /* Always 200 pixels wide */
+}
+</code></pre>
+
+
+
+            <div class="px-box">
+                <p><strong>200px wide</strong></p>
+            </div>
+
+        </div>
+
+        <div class="topic">
+            <h2>2. % – Percentage of Parent Element</h2>
+
+            <ul>
+                <li class="li"><strong>Definition:</strong> A relative unit. The size is calculated as a percentage of
+                    the parent
+                    element's size.</li>
+                <li class="li"><strong>Use Case:</strong> Makes layouts fluid and adaptable.</li>
+                <li class="li"><strong>Responsive?</strong> ✅ Yes, responds to parent size.</li>
+            </ul>
+
+
+
+            <p class="example"><strong>Example:</strong></p>
+
+            <pre><code>
+.parent {
+  width: 400px;
+}
+
+.child {
+  width: 50%;  /* 50% of 400px = 200px */
+}
+</code></pre>
+
+            <div class="parent">
+                <p><strong>Parent div</strong></p>
+
+                <div class="child">
+                    Child div
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="topic">
+            <h2>3. em – Relative to Parent Font Size</h2>
+
+            <ul>
+                <li class="li">Definition: Relative to the font-size of the parent element.</li>
+                <li class="li">1em = current font size.</li>
+                <li class="li">Use Case: Good for scaling paddings, margins, or font-size relative to surrounding text.
+                </li>
+                <li class="li">Responsive? ✅ Depends on parent.</li>
+            </ul>
+
+
+
+            <p class="example"><strong>Example:</strong></p>
+
+            <pre><code>
+body {
+  font-size: 16px;
+}
+
+p {
+  font-size: 1.5em; /* 1.5 × 16px = 24px */
+}
+</code></pre>
+
+            <div class="em-body">
+                <p>Parent font size (16px) </p>
+
+                <div class="em-paragraph">
+                    <p>Child font size (1.5em)</p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+    </main>
+</body>
+
+</html>

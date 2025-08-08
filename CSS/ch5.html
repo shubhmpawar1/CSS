@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size, Position & Lists</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .topic {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .topic h2 {
+            margin-bottom: 10px;
+        }
+
+        .topic ul {
+            margin-bottom: 15px;
+        }
+
+        .topic li {
+            margin: 8px 0;
+        }
+
+        pre {
+            background: #333;
+            color: #0f0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        /* px example */
+        .px-box {
+            margin-top: 10px;
+            background-color: blueviolet;
+            text-align: center;
+            width: 200px;
+            height: 50px;
+            color: white;
+            line-height: 50px;
+            border: 2px dashed white;
+        }
+
+        /* % example */
+        .parent {
+            margin-top: 10px;
+            background-color: blueviolet;
+            color: white;
+            width: 400px;
+            padding: 10px;
+            border: 2px dashed white;
+        }
+
+        .child {
+            background-color: red;
+            width: 50%;
+            padding: 10px;
+            border: 2px dashed white;
+        }
+
+        /* em example */
+        .em-body {
+            font-size: 16px;
+            background-color: blueviolet;
+            color: white;
+            padding: 10px;
+            border: 2px dashed white;
+            display: inline-block;
+        }
+
+        .em-paragraph {
+            font-size: 1.5em; /* 1.5 × 16px = 24px */
+            background-color: red;
+            padding: 10px;
+            border: 2px dashed white;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Size, Position & Lists</h1>
+    </header>
+
+    <!-- px example -->
+    <div class="topic">
+        <h2>1. px – Pixels (Fixed Size)</h2>
+        <ul>
+            <li>Definition: A fixed unit representing a single dot on the screen.</li>
+            <li>Use Case: Best for precise control.</li>
+            <li>Responsive? ❌ No.</li>
+        </ul>
+        <pre><code>div {
+  width: 200px; /* Always 200 pixels wide */
+}</code></pre>
+        <div class="px-box">200px wide</div>
+    </div>
+
+    <!-- % example -->
+    <div class="topic">
+        <h2>2. % – Percentage of Parent Element</h2>
+        <ul>
+            <li>Definition: Relative to parent element size.</li>
+            <li>Use Case: Fluid, adaptable layouts.</li>
+            <li>Responsive? ✅ Yes.</li>
+        </ul>
+        <pre><code>.parent {
+  width: 400px;
+}
+
+.child {
+  width: 50%; /* 200px in this case */
+}</code></pre>
+        <div class="parent">
+            Parent (400px)
+            <div class="child">Child (50% of parent)</div>
+        </div>
+    </div>
+
+    <!-- em example -->
+    <div class="topic">
+        <h2>3. em – Relative to Parent Font Size</h2>
+        <ul>
+            <li>Definition: Relative to parent font-size.</li>
+            <li>1em = current font size.</li>
+            <li>Use Case: Good for scaling text, padding, margins.</li>
+            <li>Responsive? ✅ Depends on parent.</li>
+        </ul>
+        <pre><code>body {
+  font-size: 16px;
+}
+
+p {
+  font-size: 1.5em; /* 1.5 × 16px = 24px */
+}</code></pre>
+        <div class="em-body">
+            Parent font size (16px)
+            <div class="em-paragraph">Child font size (1.5em)</div>
+        </div>
+    </div>
+</body>
+</html>
