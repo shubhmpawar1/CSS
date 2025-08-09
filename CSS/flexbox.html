@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            padding: 2vw;
+            margin: 1vh;
+            text-align: center;
+            background-color: black;
+            color: white;
+            border-radius: 2vh;
+        }
+
+        header p {
+            margin-top: 10px;
+        }
+
+        .topic {
+            margin: 1vh;
+            padding: 2vw;
+            background-color: black;
+            color: white;
+            border-radius: 2vh;
+
+
+        }
+
+        .topic::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .topic h2 {
+            text-align: center;
+            color: gold;
+
+
+        }
+
+        .topic ul {
+            margin-bottom: 2vh;
+        }
+
+        .topic li {
+            margin: 2vh;
+
+
+        }
+
+        .topic p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+
+        }
+
+        .def {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 5px;
+            text-align: center;
+            border: 3px white solid;
+            background-color: blue;
+            border-radius: 10px;
+        }
+
+        pre {
+            background: #333;
+            color: #0f0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+
+
+        }
+
+        /* floated to the right.  */
+
+        .float-box1 {
+            background-color: blueviolet;
+            height: 10vh;
+            width: 42vw;
+            float: right;
+            margin: 10px;
+            border: white 2px dashed;
+
+
+        }
+
+        /* floated to the left. */
+
+        .float-box2 {
+            background-color: blueviolet;
+            height: 10vh;
+            width: 42vw;
+            float: left;
+            margin: 10px;
+            border: white 2px dashed;
+
+
+        }
+
+        .clear-box {
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+            float: left;
+            margin: 10px;
+            color: black;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        img {
+            height: 400px;
+            border: rgb(5, 208, 226) 5px solid;
+            border-radius: 10px;
+        }
+
+        .table {
+            background: #333;
+            color: white;
+            margin: 10px;
+
+
+        }
+
+        th,
+        td {
+            padding: 10px;
+            /* space inside cells */
+            border: 1px solid black;
+            /* to see the effect clearly */
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+        }
+
+        th {
+            color: gold;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            /* items in a row */
+            justify-content: center;
+            /* center horizontally */
+            align-items: center;
+            /* center vertically */
+            gap: 10px;
+            /* spacing between items */
+        }
+
+        .container div {
+            background: lightblue;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1> Flexbox</h1>
+    </header>
+    <main>
+        <div class="topic">
+            <h2>The Float Property</h2>
+
+            <p class="def">The float property in CSS is used to position an element to the left or right within its
+                container,
+                allowing other content (like text) to flow around it. It’s often used for creating layouts or for
+                wrapping text around images.</p>
+
+            <p>Syntax:</p>
+
+            <pre><code>selector {
+  float: none | left | right | inline-start | inline-end;
+}
+</code></pre>
+
+            <p>Values:</p>
+
+            <ul>
+                <li><strong>none</strong> (default): The element does not float; it stays in the normal flow.</li>
+                <li><strong>left</strong>: The element floats to the left of its container.</li>
+                <li><strong>right</strong>: The element floats to the right of its container.</li>
+            </ul>
+
+            <p>Example:</p>
+
+            <div class="float-box1">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum, iure?</p>
+            </div>
+
+            <div class="float-box2">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum, iure?</p>
+            </div>
+
+        </div>
+
+        <div class="topic">
+            <h2>The clear property</h2>
+
+            <p class="def">In CSS, the clear property controls whether an element is allowed to sit beside floating
+                elements (float)
+                or if it should be moved down below them.</p>
+
+            <p class="def">It’s typically used to “clear” space under floated elements so that the next block element
+                starts on a
+                new line without wrapping around them.</p>
+
+            <p>Syntax:</p>
+
+            <pre><code>
+element {
+  clear: none | left | right | both | inline-start | inline-end;
+}
+</code></pre>
+
+            <p>Values:</p>
+
+            <ul>
+                <li><strong>none</strong> — Default. Allows the element to be next to floated elements.</li>
+                <li><strong>left</strong> — Moves the element below any floated elements on the left.</li>
+                <li><strong>right</strong> — Moves the element below any floated elements on the right.</li>
+                <li><strong>both</strong> — Moves the element below floated elements on both sides.</li>
+            </ul>
+
+            <p>Example:</p>
+
+            <pre><code>
+&lt;style&gt;
+.box {
+  width: 100px;
+  height: 100px;
+  background: lightblue;
+  float: left;
+  margin: 10px;
+}
+.clearfix {
+  clear: both;
+}
+&lt;/style&gt;
+
+&lt;div class="clear-box"&gt;1&lt;/div&gt;
+&lt;div class="clear-box"&gt;2&lt;/div&gt;
+&lt;p class="clearfix"&gt;This paragraph starts below the floated boxes.&lt;/p&gt;
+</code></pre>
+
+
+            <div class="clear-box">1</div>
+            <div class="clear-box">2</div>
+            <p class="clearfix">This paragraph starts below the floated boxes.</p>
+
+            <p>What happens:</p>
+
+            <ul>
+                <li>Without <code>clear: both;</code>, the paragraph would wrap around the floated boxes.</li>
+                <li>With <code>clear: both;</code>, it jumps below them.</li>
+            </ul>
+
+            <p> Tip: In modern layouts, floats are less common for positioning (we use Flexbox/Grid now), but clear is
+                still useful when working with older float-based designs or for clearing images inside text.</p>
+
+        </div>
+
+        <div class="topic">
+            <h2>Flexbox</h2>
+
+            <p class="def">Flexbox (short for “Flexible Box Layout”) is a CSS layout system designed to arrange elements
+                in a row or
+                column, and distribute space between them without having to use floats, tables, or complicated
+                positioning tricks.</p>
+
+            <p class="def">Think of it as a “smart box” that knows how to arrange its children neatly, even if their
+                sizes vary.</p>
+
+            <p>How to activate Flexbox:</p>
+
+            <p>You turn any element into a flex container by giving it:</p>
+            <pre><code>
+.container {
+  display: flex;
+}
+</code></pre>
+
+            <p>Now all direct children of .container become flex items.</p>
+
+            <p>Main concepts:</p>
+
+            <p>Flexbox works along two axes:</p>
+
+            <ul>
+                <li><strong>Main axis</strong> → Direction in which items are laid out (row or column).</li>
+                <li><strong>Cross axis</strong> → Perpendicular to the main axis.</li>
+            </ul>
+
+            <img src="../img/flexbox-axes.avif" alt="Image Not Avaliable">
+
+
+
+            <table border="1" cellpadding="5" cellspacing="0" class="table">
+
+                <caption>properties On the Container</caption>
+                <tr>
+                    <th>Property</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td><code>flex-direction</code></td>
+                    <td>Sets main axis direction: <code>row</code> (default), <code>row-reverse</code>,
+                        <code>column</code>, <code>column-reverse</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>justify-content</code></td>
+                    <td>Aligns items along the <b>main axis</b>: <code>flex-start</code>, <code>flex-end</code>,
+                        <code>center</code>, <code>space-between</code>, <code>space-around</code>,
+                        <code>space-evenly</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>align-items</code></td>
+                    <td>Aligns items along the <b>cross axis</b> (within each row/column): <code>flex-start</code>,
+                        <code>flex-end</code>, <code>center</code>, <code>stretch</code>, <code>baseline</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>align-content</code></td>
+                    <td>Aligns <b>multiple rows</b> (or columns, if <code>flex-direction: column</code>) along the
+                        <b>cross axis</b> when there’s extra space: <code>flex-start</code>, <code>flex-end</code>,
+                        <code>center</code>, <code>space-between</code>, <code>space-around</code>, <code>stretch</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>flex-wrap</code></td>
+                    <td>Controls wrapping: <code>nowrap</code> (default), <code>wrap</code>, <code>wrap-reverse</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>gap</code></td>
+                    <td>Adds space between items without using margins</td>
+                </tr>
+            </table>
+
+
+            <table border="1" cellpadding="5" cellspacing="0" class="table">
+                <caption>properties On the Items</caption>
+                <tr>
+                    <th>Property</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td><code>order</code></td>
+                    <td>Controls the order in which a flex item appears; lower values appear first (default is
+                        <code>0</code>)
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>flex-grow</code></td>
+                    <td>How much the item can grow relative to others</td>
+                </tr>
+                <tr>
+                    <td><code>flex-shrink</code></td>
+                    <td>How much the item can shrink relative to others</td>
+                </tr>
+                <tr>
+                    <td><code>flex-basis</code></td>
+                    <td>Initial size before growing/shrinking</td>
+                </tr>
+                <tr>
+                    <td><code>flex</code></td>
+                    <td>Shorthand for grow, shrink, basis (e.g. <code>flex: 1 0 200px</code>)</td>
+                </tr>
+                <tr>
+                    <td><code>align-self</code></td>
+                    <td>Overrides container’s <code>align-items</code> for a single item</td>
+                </tr>
+            </table>
+
+            <p>Example:</p>
+
+            <div class="container">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+
+            <p>Why Flexbox is great</p>
+
+            <ul>
+                <li>Automatic alignment &amp; spacing</li>
+                <li>Responsive without media queries (in many cases)</li>
+                <li>Easy vertical centering (finally!)</li>
+            </ul>
+
+
+
+
+
+
+
+        </div>
+    </main>
+
+
+</body>
+
+</html>
