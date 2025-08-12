@@ -104,9 +104,11 @@
         }
 
         .grid-tem-col {
-
+            margin: 10px;
             display: grid;
-            grid-template-rows: 100px 100px 100px;
+            grid-template-columns: 100px auto auto 100px;
+
+
             background-color: aquamarine;
             color: blue;
             gap: 10px;
@@ -116,6 +118,93 @@
         }
 
         .grid-tem-col div {
+            border: solid 5px red;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .grid-tem-row {
+            margin: 10px;
+            display: grid;
+            grid-template-rows: 200px auto auto 300px auto 400px;
+            background-color: aquamarine;
+            color: blue;
+            gap: 10px;
+
+        }
+
+        .grid-tem-row div {
+            border: solid 5px red;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .justify-content-center {
+            margin: 10px;
+            display: grid;
+            grid-template-columns: 100px auto auto 100px;
+            justify-content: center;
+            background-color: aquamarine;
+            color: blue;
+            gap: 10px;
+
+        }
+
+        .justify-content-start {
+            margin: 10px;
+            display: grid;
+            grid-template-columns: 100px auto auto 100px;
+            justify-content: start;
+            background-color: aquamarine;
+            color: blue;
+            gap: 10px;
+
+        }
+
+         .justify-content-end {
+            margin: 10px;
+            display: grid;
+            grid-template-columns: 100px auto auto 100px;
+            justify-content: end;
+            background-color: aquamarine;
+            color: blue;
+            gap: 10px;
+
+        }
+
+         .justify-content-space-between {
+            margin: 10px;
+            display: grid;
+            grid-template-columns: 100px auto auto 100px;
+            justify-content: space-between;
+            background-color: aquamarine;
+            color: blue;
+            gap: 10px;
+
+        }
+
+        .justify-content-space-around {
+            margin: 10px;
+            display: grid;
+            grid-template-columns: 100px auto auto 100px;
+            justify-content: space-around;
+            background-color: aquamarine;
+            color: blue;
+            gap: 10px;
+
+        }
+
+        .justify-content-space-evenly{
+             margin: 10px;
+            display: grid;
+            grid-template-columns: 100px auto auto 100px;
+            justify-content: space-evenly;
+            background-color: aquamarine;
+            color: blue;
+            gap: 10px;
+        }
+
+        .justify-content-center div, .justify-content-start div , .justify-content-end div , .justify-content-space-between div ,  .justify-content-space-around div, .justify-content-space-evenly div{
             border: solid 5px red;
             padding: 10px;
             text-align: center;
@@ -157,22 +246,141 @@ display: inline-grid;   /* Inline-level grid */
 
             <p class="def">grid-template-columns defines the number of columns in a CSS grid and their widths.</p>
 
+            <p class="def">Sets column sizes</p>
+
             <p class="example">Example:</p>
 
             <pre><code>
 .container {
-  display: grid;
-  grid-template-columns: 200px 1fr 1fr; /* Both axes */
-
-}
+            display: grid;
+            grid-template-columns: 100px  auto auto 100px;
+            background-color: aquamarine;
+            color: blue;
+            gap: 10px;
+        }
 </code></pre>
 
             <div class="grid-tem-col">
                 <div>1</div>
                 <div>2</div>
                 <div>3</div>
+                <div>4</div>
+
+
+                <div>a</div>
+                <div>b</div>
+                <div>c</div>
+                <div>d</div>
+
 
             </div>
+
+
+            <h4>ii. grid-template-rows</h4>
+
+            <p class="def">grid-template-rows in CSS defines the height of each row in a CSS Grid container.</p>
+
+            <p class="example">Example:</p>
+
+            <pre><code>
+.container {
+           display: grid;
+            grid-template-rows: 200px auto auto 300px auto 400px;background-color: aquamarine;
+            color: blue;
+            gap: 10px;
+}
+
+            </code></pre>
+
+            <div class="grid-tem-row">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>a</div>
+                <div>b</div>
+                <div>c</div>
+            </div>
+        </section>
+
+        <section class="topic">
+            <h3>3. Control Gaps</h2>
+
+                <h4>i. gap</h4>
+                <p class="def">Sets both row and column gap</p>
+
+                <h4>ii. row-gap </h4>
+                <p class="def">Space between rows</p>
+
+                <h4>iii. column-gap</h4>
+                <p class="def">Space between columns</p>
+        </section>
+
+        <section class="topic">
+            <h3>4. Alignment (Whole Grid)</h3>
+
+            <h4>i. justify-content</h4>
+
+            <p class="def">In CSS Grid, justify-content controls how the entire grid is positioned along the row
+                (inline) axis inside the grid container when there’s extra horizontal space.</p>
+
+            <p class="example">Values:</p>
+
+            <ul>
+                <li><strong>start</strong> → Aligns grid to the left.</li>
+                <li><strong>end</strong> → Aligns grid to the right.</li>
+                <li><strong>center</strong> → Centers the grid.</li>
+                <li><strong>space-between</strong> → First and last tracks stick to edges; equal gaps between tracks.
+                </li>
+                <li><strong>space-around</strong> → Equal gaps around each track (half-gap at edges).</li>
+                <li><strong>space-evenly</strong> → Equal gaps between and at edges.</li>
+            </ul>
+
+            <p class="example">Example:</p>
+
+            <div class="justify-content-center">
+                <div>center</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+
+            <div class="justify-content-start">
+                <div>start</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+
+             <div class="justify-content-end">
+                <div>end</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+
+             <div class="justify-content-space-between">
+                <div>space-between</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+
+            <div class="justify-content-space-around">
+                <div>space-around</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+
+            <div class="justify-content-space-evenly">
+                <div>space-evenly</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+
+
+
 
         </section>
     </main>
