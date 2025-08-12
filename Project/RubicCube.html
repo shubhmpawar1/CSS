@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pure HTML + CSS Rubik's Cube</title>
+  <style>
+    :root{
+      --cube-size: 240px; /* overall cube size */
+      --sticker-gap: 6px;  /* gap between stickers */
+      --face-size: calc(var(--cube-size));
+      --sticker-count: 3; /* 3x3 */
+    }
+
+    *{box-sizing: border-box}
+    html,body{height:100%;margin:0;display:grid;place-items:center;background:#111}
+
+    .scene{
+      width:var(--cube-size);
+      height:var(--cube-size);
+      perspective:1000px;
+    }
+
+    .cube{
+      position:relative;
+      width:100%;
+      height:100%;
+      transform-style:preserve-3d;
+      transition:transform 700ms cubic-bezier(.2,.9,.3,1);
+      transform: rotateX(-20deg) rotateY(-35deg);
+      margin:auto;
+    }
+
+    /* rotate on hover (desktop) */
+    .scene:hover .cube{
+      transform: rotateX(-20deg) rotateY(45deg) translateZ(0);
+    }
+
+    .face{
+      position:absolute;
+      width:100%;
+      height:100%;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: var(--sticker-gap);
+      padding: var(--sticker-gap);
+      background: transparent;
+      backface-visibility: hidden;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.45) inset;
+    }
+
+    .sticker{
+      border-radius:6px;
+      background: #222;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:12px;
+      color:transparent;
+      box-shadow: 0 2px 0 rgba(0,0,0,.25) inset;
+    }
+
+    /* face placements (size/translateZ depends on half of cube size) */
+    .face.front{ transform: translateZ(calc(var(--face-size) / 2)); }
+    .face.back{ transform: rotateY(180deg) translateZ(calc(var(--face-size) / 2)); }
+    .face.right{ transform: rotateY(90deg) translateZ(calc(var(--face-size) / 2)); }
+    .face.left{ transform: rotateY(-90deg) translateZ(calc(var(--face-size) / 2)); }
+    .face.top{ transform: rotateX(90deg) translateZ(calc(var(--face-size) / 2)); }
+    .face.bottom{ transform: rotateX(-90deg) translateZ(calc(var(--face-size) / 2)); }
+
+    /* colors for stickers by face */
+    .front .sticker{ background: #ffeb3b; } /* yellow */
+    .back .sticker{ background: #ffffff; }  /* white */
+    .right .sticker{ background: #ff5722; } /* orange */
+    .left .sticker{ background: #ff3b3b; }  /* red */
+    .top .sticker{ background: #4caf50; }   /* green */
+    .bottom .sticker{ background: #2196f3; }/* blue */
+
+    /* make stickers look slightly inset with borders */
+    .sticker{ border: 3px solid rgba(0,0,0,.14);} 
+
+    /* small responsive scaling */
+    @media (max-width:420px){
+      :root{ --cube-size: 200px; }
+    }
+
+    /* neat reflection beneath cube */
+    .reflect{
+      position:absolute;left:50%;transform:translateX(-50%);
+      top:calc(100% + 18px); width:calc(var(--cube-size)); height:26px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
+      filter: blur(8px); opacity:.25; border-radius:8px;
+    }
+
+    /* tiny caption */
+    .credit{position:fixed;right:12px;bottom:12px;color:#888;font-family:system-ui,Segoe UI,Roboto,Arial}
+
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <div class="cube" role="img" aria-label="3D Rubik's cube made with HTML and CSS">
+
+      <div class="face front">
+        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+      </div>
+
+      <div class="face back">
+        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+      </div>
+
+      <div class="face right">
+        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+      </div>
+
+      <div class="face left">
+        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+      </div>
+
+      <div class="face top">
+        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+      </div>
+
+      <div class="face bottom">
+        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+        <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+      </div>
+
+    </div>
+    <div class="reflect" aria-hidden="true"></div>
+  </div>
+
+  <div class="credit">Pure HTML + CSS Rubik's Cube — hover to rotate</div>
+</body>
+</html>

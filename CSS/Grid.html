@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            padding: 2vw;
+            margin: 1vh;
+            text-align: center;
+            background-color: black;
+            color: white;
+            border-radius: 2vh;
+        }
+
+        header p {
+            margin-top: 10px;
+        }
+
+        .topic {
+            margin: 1vh;
+            padding: 2vw;
+            background-color: black;
+            color: white;
+            border-radius: 2vh;
+
+
+        }
+
+        .topic h2,
+        h3,
+        h4 {
+            text-align: center;
+            color: gold;
+
+
+        }
+
+        .topic h3 {
+            margin: 15px;
+            color: rgb(114, 169, 242);
+        }
+
+        .topic h4 {
+            margin: 5px;
+            color: rgb(248, 117, 255);
+        }
+
+        .topic ul {
+            margin-bottom: 2vh;
+        }
+
+        .topic li {
+            margin: 2vh;
+
+
+        }
+
+        .topic p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+
+        }
+
+        .def {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 5px;
+            text-align: center;
+            border: 3px white solid;
+            background-color: blue;
+            border-radius: 10px;
+        }
+
+        pre {
+            background: #333;
+            color: #0f0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+
+
+        }
+
+        .example {
+            margin-top: 2vh;
+            margin-bottom: 3vh;
+            text-align: center;
+
+        }
+
+        .grid-tem-col {
+
+            display: grid;
+            grid-template-rows: 100px 100px 100px;
+            background-color: aquamarine;
+            color: blue;
+            gap: 10px;
+
+            /* Both axes */
+
+        }
+
+        .grid-tem-col div {
+            border: solid 5px red;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Grid</h1>
+
+        <p>CSS Grid is a 2D layout system in CSS that lets you arrange items in rows and columns easily. Unlike Flexbox
+            (which is mainly 1D), Grid can handle both horizontal and vertical layout at the same time.</p>
+    </header>
+
+    <main>
+        <section class="topic">
+            <h2>A. Container Property</h2>
+            <h3>1. Enable Grid</h3>
+
+            <pre><code>
+display: grid;          /* Block-level grid */
+display: inline-grid;   /* Inline-level grid */
+</code></pre>
+
+
+
+
+
+
+        </section>
+
+        <section class="topic">
+            <h3>2. Define the Structure</h3>
+
+            <h4>i. grid-template-columns</h4>
+
+            <p class="def">grid-template-columns defines the number of columns in a CSS grid and their widths.</p>
+
+            <p class="example">Example:</p>
+
+            <pre><code>
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr; /* Both axes */
+
+}
+</code></pre>
+
+            <div class="grid-tem-col">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+
+            </div>
+
+        </section>
+    </main>
+
+</body>
+
+</html>
